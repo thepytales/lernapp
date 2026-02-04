@@ -1532,40 +1532,299 @@ function renderQuiz(key) {
 // cat: Kategorie ('ottonen' oder 'ww1')
 // expl: Erklärungstext für das Feedback
 
-const examPool = [
-    // --- OTTONEN FRAGEN ---
-    { cat: 'ottonen', q: "Welches Prinzip der Thronfolge führte Heinrich I. ein?", a: ["Realteilung (Aufteilung an alle Söhne)", "Unteilbarkeit des Königtums (Primogenitur)", "Wahl durch das Volk"], c: 1, expl: "Heinrich I. brach mit der karolingischen Tradition der Reichsteilung und bestimmte Otto I. zum alleinigen Nachfolger." },
-    { cat: 'ottonen', q: "Wann und wo wurde Otto I. zum Kaiser gekrönt?", a: ["955 in Augsburg", "962 in Rom", "973 in Aachen"], c: 1, expl: "Die Kaiserkrönung fand im Februar 962 in Rom durch Papst Johannes XII. statt." },
-    { cat: 'ottonen', q: "Welches Ereignis beendete die Ungarneinfälle endgültig?", a: ["Schlacht auf dem Lechfeld (955)", "Schlacht bei Lenzen (929)", "Frieden von Venedig (972)"], c: 0, expl: "Der Sieg auf dem Lechfeld 955 unter Otto I. stoppte die ungarischen Raubzüge dauerhaft." },
-    { cat: 'ottonen', q: "Wer rebellierte im 'Liudolf-Aufstand' gegen Otto I.?", a: ["Sein Bruder Heinrich & die Slawen", "Sein Sohn Liudolf & Konrad der Rote", "Der Papst & Berengar"], c: 1, expl: "Ottos Sohn Liudolf fürchtete um sein Erbe durch Ottos zweite Heirat und verbündete sich mit Konrad dem Roten." },
-    { cat: 'ottonen', q: "Was war das 'Ottonianum'?", a: ["Ein Kloster in Sachsen", "Eine Urkunde, die dem Kaiser Rechte bei der Papstwahl sicherte", "Die Kaiserkrone der Ottonen"], c: 1, expl: "Das Privilegium Ottonianum bestätigte päpstliche Besitzungen, forderte aber, dass der Papst dem Kaiser treu sein musste." },
-    { cat: 'ottonen', q: "Warum war die Heirat von Otto II. mit Theophanu politisch so wichtig?", a: ["Sie brachte viel Geld aus Griechenland", "Sie beendete den Streit mit Frankreich", "Sie bedeutete die Anerkennung des westlichen Kaisertums durch Byzanz"], c: 2, expl: "Durch die Heirat erkannte der byzantinische Kaiser (Ostrom) den deutschen Kaiser (Westrom) als gleichberechtigt an." },
-    { cat: 'ottonen', q: "Welche Katastrophe widerfuhr Otto II. im Jahr 982?", a: ["Die Niederlage bei Kap Colonna gegen Sarazenen", "Der Verlust von Lothringen", "Ein schwerer Reitunfall"], c: 0, expl: "In der Schlacht am Kap Colonna in Süditalien wurde das kaiserliche Heer von den Sarazenen vernichtend geschlagen." },
-    { cat: 'ottonen', q: "Wer übernahm die Regentschaft für den minderjährigen Otto III.?", a: ["Heinrich der Zänker allein", "Seine Mutter Theophanu und Großmutter Adelheid", "Der Erzbischof von Mainz"], c: 1, expl: "Nachdem Heinrich der Zänker gescheitert war, regierten die Kaiserinnen Theophanu (bis 991) und Adelheid (bis 994)." },
-    { cat: 'ottonen', q: "Welches Ziel verfolgte Otto III. mit seiner Politik?", a: ["Renovatio imperii Romanorum (Erneuerung des Römischen Reiches)", "Eroberung von Frankreich", "Abschaffung des Papsttums"], c: 0, expl: "Otto III. wollte Rom wieder zum Zentrum der weltlichen und geistlichen Macht machen." },
-    { cat: 'ottonen', q: "Wie verhielt sich Otto I. gegenüber den Slawen?", a: ["Er schloss nur Friedensverträge", "Harte Unterwerfung und Christianisierung", "Er ignorierte sie weitgehend"], c: 1, expl: "Otto I. und Markgraf Gero gingen brutal vor, ließen Slawenfürsten ermorden und trieben die Christianisierung militärisch voran." },
-    { cat: 'ottonen', q: "Was geschah beim 'Gnesener Akt' im Jahr 1000?", a: ["Otto III. erklärte Polen den Krieg", "Otto III. pilgerte zum Grab Adalberts und gründete das Erzbistum Gnesen", "Otto III. wurde dort beerdigt"], c: 1, expl: "Otto III. erkannte damit die kirchliche Selbstständigkeit Polens an." },
-    { cat: 'ottonen', q: "Wer war 'Heinrich der Zänker'?", a: ["Ein Herzog von Bayern, der mehrfach gegen die Ottonen rebellierte", "Der Bruder von Otto III.", "Ein berühmter Minnesänger"], c: 0, expl: "Heinrich II. von Bayern versuchte mehrfach, selbst König zu werden, scheiterte aber an Otto II. und Theophanu." },
-    { cat: 'ottonen', q: "Was bedeutet 'Primogenitur'?", a: ["Wahlkönigtum", "Erstgeburtsrecht (Der Älteste erbt alles)", "Teilung durch alle Erben"], c: 1, expl: "Dieses Prinzip setzte sich unter den Ottonen durch, um die Zersplitterung des Reiches zu verhindern." },
-    { cat: 'ottonen', q: "Warum wurde Adelheid für Otto I. so wichtig?", a: ["Sie war sehr reich", "Sie öffnete ihm den Weg zur italienischen Königskrone", "Sie war eine byzantinische Prinzessin"], c: 1, expl: "Als Witwe des italienischen Königs brachte sie den Anspruch auf Italien in die Ehe ein." },
-    { cat: 'ottonen', q: "Wie endete das Leben von Otto III.?", a: ["Er fiel in einer Schlacht", "Er starb früh und unerwartet (wahrscheinlich an Malaria) in Italien", "Er dankte ab und ging ins Kloster"], c: 1, expl: "Er starb 1002 mit nur 21 Jahren in der Nähe von Rom." },
+// ==========================================
+// 1. GROSSE FRAGENDATENBANK (POOL) - EXPANDED EDITION
+// ==========================================
+// c: Index der korrekten Antwort (0 bis 4)
 
-    // --- 1. WELTKRIEG FRAGEN ---
-    { cat: 'ww1', q: "Was war der 'Steckrübenwinter' 1916/17?", a: ["Eine neue landwirtschaftliche Strategie", "Eine massive Hungersnot in Deutschland", "Ein militärischer Code für einen Angriff"], c: 1, expl: "Durch Missernten und die britische Seeblockade brach die Versorgung zusammen. Die Steckrübe wurde zum einzigen Nahrungsmittel." },
-    { cat: 'ww1', q: "Was war das Ziel des 'Hindenburg-Programms' 1916?", a: ["Friedensverhandlungen mit Russland", "Maximale Steigerung der Rüstungsproduktion", "Verbesserung der Lebensmittelversorgung"], c: 1, expl: "Die OHL wollte die Produktion von Munition und Waffen verdoppeln bis verdreifachen, scheiterte aber an Arbeitskräftemangel." },
-    { cat: 'ww1', q: "Welche Auswirkung hatte die britische Seeblockade?", a: ["Keine, Deutschland war autark", "Abschneiden von Importen (Lebensmittel, Dünger) und Hunger", "Sie verhinderte nur Waffenlieferungen"], c: 1, expl: "Deutschland war auf Importe angewiesen. Das Fehlen von Dünger und Nahrungsmitteln führte zum Hungertod von ca. 800.000 Zivilisten." },
-    { cat: 'ww1', q: "Was war die 'Judenzählung' von 1916?", a: ["Eine antisemitische Erhebung, um Juden Drückebergerei vorzuwerfen", "Eine religiöse Volkszählung", "Eine Maßnahme zum Schutz jüdischer Soldaten"], c: 0, expl: "Das Kriegsministerium wollte beweisen, dass sich Juden drückten. Das Gegenteil war der Fall, die Ergebnisse wurden daher verschwiegen." },
-    { cat: 'ww1', q: "Welche Rolle spielten Frauen an der 'Heimatfront'?", a: ["Sie kümmerten sich nur um die Kinder", "Sie ersetzten die Männer in Rüstungsindustrie und Landwirtschaft", "Sie durften nicht arbeiten"], c: 1, expl: "Da die Männer an der Front waren, übernahmen Frauen Schlüsselfunktionen in Fabriken und im öffentlichen Leben." },
-    { cat: 'ww1', q: "Was löste im November 1918 die Revolution aus?", a: ["Der Matrosenaufstand in Kiel", "Eine Rede von Hindenburg", "Der Einmarsch der Amerikaner"], c: 0, expl: "Matrosen weigerten sich, zu einer sinnlosen letzten Schlacht auszulaufen. Der Aufstand breitete sich im ganzen Reich aus." },
-    { cat: 'ww1', q: "Wer rief am 9. November 1918 die Republik aus?", a: ["Nur Karl Liebknecht", "Philipp Scheidemann (Republik) & Karl Liebknecht (Räterepublik)", "Friedrich Ebert"], c: 1, expl: "Es gab eine doppelte Ausrufung: Scheidemann rief die bürgerliche Republik aus, Liebknecht die sozialistische." },
-    { cat: 'ww1', q: "Was bedeutet 'Materialschlacht'?", a: ["Kriegführung, bei der Mensch und Material massenhaft eingesetzt werden", "Ein Kampf um Rohstoffe", "Eine Schlacht ohne Waffen"], c: 0, expl: "Beispiele sind Verdun und die Somme: Der Gegner sollte durch den massiven Einsatz von Artillerie mürbe gemacht werden." },
-    { cat: 'ww1', q: "Wie reagierte der Staat auf die ersten Friedensproteste?", a: ["Mit sofortigen Reformen", "Mit Repression, Zensur und Militärdienst für Streikende", "Der Kaiser trat zurück"], c: 1, expl: "Der Staat versuchte, die Proteste gewaltsam zu unterdrücken oder die Anführer an die Front zu schicken." },
-    { cat: 'ww1', q: "Wann traten die USA in den Krieg ein?", a: ["1914", "1917", "1918"], c: 1, expl: "Der Kriegseintritt der USA 1917 verschob das Kräfteverhältnis entscheidend zu Ungunsten Deutschlands." },
-    { cat: 'ww1', q: "Was geschah im 'Januarstreik' 1918?", a: ["Über 400.000 Arbeiter forderten Frieden und Reformen", "Die Soldaten legten die Waffen nieder", "Die Bauern weigerten sich zu ernten"], c: 0, expl: "Es war der größte Massenstreik während des Krieges, organisiert von den 'Revolutionären Obleuten' und der USPD." },
-    { cat: 'ww1', q: "Welches neue Kampfmittel kam 1915 erstmals zum Einsatz?", a: ["Atombomben", "Giftgas", "Düsenjets"], c: 1, expl: "Chlorgas wurde erstmals von deutschen Truppen bei Ypern eingesetzt, ein Bruch der Haager Landkriegsordnung." },
-    { cat: 'ww1', q: "Warum scheiterte das Hindenburg-Programm?", a: ["Zu wenig Geld", "Mangel an Arbeitskräften und Transportmitteln sowie Hunger", "Die Fabriken wurden bombardiert"], c: 1, expl: "Man konnte die Ziele nicht erreichen, weil die Arbeiter unterernährt waren und das Schienennetz überlastet war." },
-    { cat: 'ww1', q: "Was war die USPD?", a: ["Eine Abspaltung der SPD, die den Krieg ablehnte", "Die Partei des Kaisers", "Eine Gewerkschaft"], c: 0, expl: "Die Unabhängige Sozialdemokratische Partei (USPD) gründete sich 1917 aus Protest gegen die 'Burgfriedenspolitik' der SPD." },
-    { cat: 'ww1', q: "Wie viele Menschen starben im Ersten Weltkrieg (Soldaten + Zivilisten)?", a: ["Ca. 1 Million", "Ca. 17 Millionen", "Ca. 50 Millionen"], c: 1, expl: "Man schätzt etwa 10 Millionen Soldaten und 7 Millionen Zivilisten." }
+const examPool = [
+    // ------------------------------------------------------------------
+    // THEMA: DIE OTTONEN (SCHWER & DETAILREICH)
+    // ------------------------------------------------------------------
+    { 
+        cat: 'ottonen', 
+        q: "An welchem Ort starb Otto der Große im Jahr 973?", 
+        a: ["In seiner Pfalz in Aachen", "In Rom", "In der Pfalz Memleben", "Auf dem Schlachtfeld am Lech", "Im Kloster Quedlinburg"], 
+        c: 2, 
+        expl: "Otto I. starb am 7. Mai 973 in seiner Pfalz Memleben, demselben Ort, an dem auch sein Vater Heinrich I. gestorben war." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Wer war Wilhelm, der spätere Erzbischof von Mainz?", 
+        a: ["Ein Bruder Ottos I.", "Ein unehelicher Sohn Ottos I. mit einer slawischen Vornehmen", "Der Beichtvater von Adelheid", "Ein päpstlicher Gesandter", "Der Sohn von Otto II."], 
+        c: 1, 
+        expl: "Wilhelm war Ottos unehelicher Sohn aus einer Jugendliebe. Er wurde später Erzbischof von Mainz und spielte eine wichtige Rolle in der Reichspolitik." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Welcher Papst krönte Otto I. im Jahr 962 zum Kaiser?", 
+        a: ["Leo VIII.", "Johannes XII.", "Gregor V.", "Silvester II.", "Benedikt V."], 
+        c: 1, 
+        expl: "Papst Johannes XII. rief Otto zu Hilfe und krönte ihn. Später zerstritten sie sich jedoch, und Otto ließ ihn absetzen." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Was geschah mit den 30 Slawenfürsten, die Markgraf Gero zu einem Festmahl einlud?", 
+        a: ["Sie wurden getauft", "Sie schlossen einen ewigen Friedensvertrag", "Sie wurden im Schlaf ermordet", "Sie erhielten Ländereien in Sachsen", "Sie wurden als Geiseln nach Rom geschickt"], 
+        c: 2, 
+        expl: "Um die Herrschaft im Osten zu sichern, ließ Markgraf Gero die versammelten Slawenfürsten heimtückisch ermorden – ein Akt brutaler Machtpolitik." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Welchen Beinamen trug Heinrich, der Bruder Ottos I., der mehrfach gegen ihn rebellierte?", 
+        a: ["Der Löwe", "Der Zänker", "Der Fromme", "Ohne Beinamen (da er Herzog von Bayern war)", "Es gab keinen Bruder Heinrich"], 
+        c: 3, 
+        expl: "Vorsicht Fangfrage: Ottos *Bruder* war Heinrich I. von Bayern. 'Der Zänker' war dessen Sohn (Ottos Neffe), also Heinrich II. von Bayern." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Welche symbolische Handlung vollzog Otto III. im Jahr 1000 in Gnesen?", 
+        a: ["Er krönte Boleslaw Chrobry zum König", "Er errichtete das Erzbistum Gnesen", "Er erklärte Polen zum Lehen des Reiches", "Er heiratete eine polnische Prinzessin", "Er dankte ab"], 
+        c: 1, 
+        expl: "Der 'Akt von Gnesen' (Gründung des Erzbistums) gilt als Anerkennung der polnischen Souveränität im kirchlichen Bereich." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Wer war Theophanu ursprünglich?", 
+        a: ["Eine fränkische Adelige", "Eine byzantinische Prinzessin (Nichte des Kaisers Johannes Tzimiskes)", "Die Tochter des Papstes", "Eine angelsächsische Königstochter", "Eine slawische Fürstentochter"], 
+        c: 1, 
+        expl: "Sie kam aus Konstantinopel (Byzanz). Ihre Heirat mit Otto II. sollte das 'Zweikaiserproblem' zwischen Ost und West lösen." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Welches Schicksal ereilte Otto II. nach der Niederlage gegen die Sarazenen?", 
+        a: ["Er geriet in Gefangenschaft und wurde gegen Lösegeld frei", "Er fiel noch auf dem Schlachtfeld", "Er floh auf ein byzantinisches Schiff und entkam nur knapp", "Er siegte im letzten Moment doch noch", "Er wurde vom Papst exkommuniziert"], 
+        c: 2, 
+        expl: "Er musste schwimmend auf ein Schiff fliehen. Als die Besatzung ihn als Geisel nehmen wollte, sprang er erneut ins Meer und entkam." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Was versteht man unter dem 'Liudolf-Aufstand'?", 
+        a: ["Einen Bauernaufstand in Sachsen", "Die Rebellion von Ottos Sohn und Konrad dem Roten gegen Otto I.", "Einen Aufstand der Slawen", "Den Konflikt zwischen Otto II. und seiner Mutter", "Den Kampf um die Investitur"], 
+        c: 1, 
+        expl: "Liudolf fürchtete durch Ottos zweite Heirat mit Adelheid um sein Erbe und verbündete sich mit Konrad dem Roten gegen seinen Vater." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Welche Schlacht beendete die Ungarngefahr im Jahr 955 endgültig?", 
+        a: ["Schlacht bei Riade", "Schlacht auf dem Lechfeld", "Schlacht an der Unstrut", "Schlacht bei Lenzen", "Schlacht von Hastings"], 
+        c: 1, 
+        expl: "Am 10. August 955 besiegte Otto I. die Ungarn vernichtend bei Augsburg (Lechfeld)." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Wie reagierte Otto I. auf den Tod seiner ersten Frau Edgitha?", 
+        a: ["Er heiratete sofort Adelheid", "Er ging ins Kloster", "Er regelte 946 erstmals offiziell seine Nachfolge und bestimmte Liudolf", "Er startete einen Krieg gegen England", "Er dankte ab"], 
+        c: 2, 
+        expl: "Nach ihrem Tod bestimmte er seinen Sohn Liudolf zum Nachfolger – eine Regelung, die durch seine spätere zweite Heirat wieder brüchig wurde." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Wer war Gerbert von Aurillac?", 
+        a: ["Ein aufständischer Herzog", "Der Lehrer Ottos III. und spätere Papst Silvester II.", "Der Anführer der Slawen", "Ein byzantinischer Gesandter", "Der Mörder von Otto II."], 
+        c: 1, 
+        expl: "Er war ein hochgelehrter Mann, Mathematiker und enger Vertrauter Ottos III., der ihn zum Papst machte." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Welches Herzogtum fiel Otto I. nach dem Aufstand von 939 direkt zu?", 
+        a: ["Bayern", "Schwaben", "Franken", "Lothringen", "Sachsen"], 
+        c: 2, 
+        expl: "Nach dem Tod von Herzog Eberhard behielt Otto das Herzogtum Franken in eigener Hand, um seine Machtbasis zu stärken." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Was war das 'Ottonianum' (962)?", 
+        a: ["Ein Kloster", "Ein Gesetz zur Papstwahl und Bestätigung der Pippinischen Schenkung", "Die Krone der Ottonen", "Ein Friedensvertrag mit Byzanz", "Die Gründungsurkunde von Magdeburg"], 
+        c: 1, 
+        expl: "Es regelte das Verhältnis zwischen Kaiser und Papst: Der Kaiser schützte die Kirche, verlangte aber Treue und Mitsprache bei der Papstwahl." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Wer rebellierte 984 und versuchte, sich die Vormundschaft über Otto III. zu sichern?", 
+        a: ["Heinrich der Zänker", "Konrad der Rote", "Liudolf", "Otto von Worms", "Hermann von Schwaben"], 
+        c: 0, 
+        expl: "Heinrich der Zänker (aus der bayerischen Linie) wollte die Situation des Kindkönigs nutzen, um selbst die Macht zu greifen." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Warum ist die Heirat Ottos I. mit Adelheid 951 so bedeutend?", 
+        a: ["Sie brachte viel Geld", "Sie legitimierte den Anspruch auf die italienische Königskrone", "Sie beendete den Streit mit Frankreich", "Sie war die erste Liebesheirat im Mittelalter", "Adelheid war eine Slawin"], 
+        c: 1, 
+        expl: "Adelheid war die Königwitwe Italiens. Wer sie heiratete, hatte den Schlüssel zur Herrschaft über Italien." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Welche Stadt machte Otto I. zu seinem bevorzugten Aufenthalts- und Krönungsort?", 
+        a: ["Frankfurt", "Aachen", "Magdeburg", "Goslar", "Regensburg"], 
+        c: 1, 
+        expl: "Er wählte Aachen, um sich bewusst in die Tradition Karls des Großen zu stellen." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Was bedeutet der Grundsatz der 'Indivisibilität' (Unteilbarkeit), den Heinrich I. einführte?", 
+        a: ["Das Reich wird unter allen Söhnen aufgeteilt", "Nur der Älteste erbt das Königtum (Vermeidung der Reichsteilung)", "Das Volk wählt den König frei", "Die Kirche bestimmt den König", "Frauen dürfen auch herrschen"], 
+        c: 1, 
+        expl: "Dies war ein Bruch mit der fränkischen Tradition der Erbteilung und sicherte den Bestand des Ostfrankenreichs." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Wie hieß der byzantinische Kaiser, der die Hochzeit seiner Nichte Theophanu genehmigte?", 
+        a: ["Konstantin VII.", "Basileios II.", "Johannes Tzimiskes", "Nikephoros Phokas", "Justinian"], 
+        c: 2, 
+        expl: "Nachdem der vorherige Kaiser (Nikephoros) sich geweigert hatte, stimmte der neue Kaiser Johannes Tzimiskes der Ehe zu." 
+    },
+    { 
+        cat: 'ottonen', 
+        q: "Welches Ereignis löste den großen Slawenaufstand von 983 aus?", 
+        a: ["Der Tod Ottos I.", "Die Niederlage Ottos II. in Süditalien (Kap Colonna)", "Eine Hungersnot", "Die Taufe eines Slawenfürsten", "Der Bau des Doms zu Magdeburg"], 
+        c: 1, 
+        expl: "Die Nachricht von der Schwäche des kaiserlichen Heeres nach der Niederlage gegen die Sarazenen ermutigte die slawischen Stämme zum Aufstand." 
+    },
+
+    // ------------------------------------------------------------------
+    // THEMA: 1. WELTKRIEG (SCHWER & DETAILREICH)
+    // ------------------------------------------------------------------
+    { 
+        cat: 'ww1', 
+        q: "Wann trat das Deutsche Reich in den Ersten Weltkrieg ein?", 
+        a: ["1913", "1914", "1915", "1916", "1917"], 
+        c: 1, 
+        expl: "Der Krieg begann im Sommer 1914 nach dem Attentat von Sarajevo und der folgenden Julikrise." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Was war das 'Bild- und Filmamt' (BUFA)?", 
+        a: ["Eine Zensurbehörde für Zeitungen", "Eine Einrichtung zur Produktion von Propaganda (gegründet 1917)", "Ein Kino für Soldaten", "Eine Abteilung für Luftaufklärung", "Ein Spionagenetzwerk"], 
+        c: 1, 
+        expl: "Die OHL erkannte spät die Macht der Bilder und gründete 1917 das BUFA, um die Moral durch Filme und Fotos zu stärken." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Welches Ereignis löste den Kriegseintritt der USA im Jahr 1917 direkt aus?", 
+        a: ["Der Angriff auf Pearl Harbor", "Die Versenkung der Lusitania (allein)", "Die Wiederaufnahme des uneingeschränkten U-Boot-Krieges", "Die Oktoberrevolution", "Der Vormarsch auf Paris"], 
+        c: 2, 
+        expl: "Deutschland erklärte, auch zivile Schiffe neutraler Staaten anzugreifen. Dies führte zur Kriegserklärung der USA." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Was versteht man unter dem 'Steckrübenwinter'?", 
+        a: ["Eine militärische Operation im Winter", "Die Hungerkrise 1916/17, bei der Steckrüben das Hauptnahrungsmittel waren", "Ein Streik der Landwirte", "Den Winter, in dem der Krieg endete", "Eine neue Anbaumethode"], 
+        c: 1, 
+        expl: "Durch die britische Seeblockade und Missernten brach die Versorgung zusammen. Ca. 800.000 Zivilisten starben im Krieg an Unterernährung." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Wer rief am 9. November 1918 die 'sozialistische Republik' aus?", 
+        a: ["Friedrich Ebert", "Philipp Scheidemann", "Karl Liebknecht", "Rosa Luxemburg", "Paul von Hindenburg"], 
+        c: 2, 
+        expl: "Scheidemann rief vom Reichstag die (bürgerliche) Republik aus, Liebknecht kurz darauf vom Berliner Stadtschloss die sozialistische." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Was war der Auslöser für den Kieler Matrosenaufstand 1918?", 
+        a: ["Schlechtes Essen", "Der Befehl zu einer sinnlosen letzten Entscheidungsschlacht gegen England", "Die Verhaftung des Kapitäns", "Die Abdankung des Kaisers", "Ein Angriff der Engländer"], 
+        c: 1, 
+        expl: "Die Admiralität wollte die Flotte in einen ehrenvollen Untergang schicken ('Feuer aus!'). Die Matrosen verweigerten den Gehorsam." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Was besagte das 'Hindenburg-Programm' von 1916?", 
+        a: ["Sofortige Friedensverhandlungen", "Totale Mobilmachung: Verdopplung der Rüstungsproduktion & Arbeitspflicht", "Rückzug an der Westfront", "Einführung des Frauenwahlrechts", "Abschaffung der Monarchie"], 
+        c: 1, 
+        expl: "Es war der Versuch, die Wirtschaft komplett auf den Krieg auszurichten. Es scheiterte an Mangel an Arbeitskräften und Rohstoffen." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Welche Krankheit forderte ab 1918 weltweit mehr Tote als der Krieg selbst?", 
+        a: ["Die Pest", "Die Spanische Grippe", "Cholera", "Typhus", "Tuberkulose"], 
+        c: 1, 
+        expl: "Die Spanische Grippe traf auf eine durch Hunger geschwächte Bevölkerung und tötete weltweit zwischen 20 und 50 Millionen Menschen." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Was war die 'Judenzählung' von 1916?", 
+        a: ["Eine Schutzmaßnahme für jüdische Soldaten", "Eine antisemitische Erhebung, um Juden 'Drückebergerei' vorzuwerfen", "Eine religiöse Statistik", "Die Zählung jüdischer Gefallener für ein Denkmal", "Eine Volkszählung in Polen"], 
+        c: 1, 
+        expl: "Das Kriegsministerium wollte beweisen, dass Juden sich drückten. Da das Gegenteil der Fall war (sie dienten loyal), wurden die Ergebnisse verschwiegen." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Welche neue Waffe kam 1915 bei Ypern erstmals großflächig zum Einsatz?", 
+        a: ["Der Panzer", "Das Maschinengewehr", "Giftgas (Chlorgas)", "Der Flammenwerfer", "Das U-Boot"], 
+        c: 2, 
+        expl: "Der Einsatz von Giftgas durch deutsche Truppen war ein Verstoß gegen die Haager Landkriegsordnung und markierte eine neue Stufe des Schreckens." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Wer waren die 'Revolutionären Obleute'?", 
+        a: ["Eine Eliteeinheit der Armee", "Eine Gruppe unabhängiger Gewerkschafter, die Streiks organisierten", "Die Leibwache des Kaisers", "Eine religiöse Sekte", "Die Abgeordneten der SPD"], 
+        c: 1, 
+        expl: "Sie organisierten, oft im Verborgenen, die großen Massenstreiks (z.B. Januarstreik 1918) in der Rüstungsindustrie." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Warum spaltete sich die USPD 1917 von der SPD ab?", 
+        a: ["Sie war kaisertreu", "Sie lehnte die Bewilligung weiterer Kriegskredite ab (Bruch des Burgfriedens)", "Sie wollte den Krieg offensiver führen", "Sie wollte sich der CDU anschließen", "Wegen eines Streits um Gehälter"], 
+        c: 1, 
+        expl: "Die USPD formierte sich als Opposition gegen die kriegsunterstützende Haltung ('Burgfrieden') der Mehrheits-SPD." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Was versteht man unter 'Materialschlacht'?", 
+        a: ["Einen Kampf um Rohstoffe", "Eine Kriegsführung, bei der Mensch und Material massenhaft und rücksichtslos eingesetzt werden", "Eine Schlacht ohne Waffen", "Den Wirtschaftskrieg", "Die Produktion von Panzern"], 
+        c: 1, 
+        expl: "Beispiele sind Verdun und die Somme: Der Gegner sollte durch gigantischen Einsatz von Artillerie 'zermürbt' werden ('Blutmühle')." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Welche Auswirkung hatte der Krieg auf das Frauenbild?", 
+        a: ["Keine, Frauen blieben zuhause", "Frauen übernahmen 'Männerberufe' in Fabriken und im öffentlichen Dienst", "Frauen durften erstmals zur Armee", "Frauen verloren ihre Rechte", "Die Geburtenrate stieg enorm"], 
+        c: 1, 
+        expl: "Da die Männer an der Front waren, hielten Frauen das öffentliche Leben und die Rüstungsproduktion aufrecht. Dies stärkte ihr Selbstbewusstsein langfristig." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Wie viele Menschen (Soldaten und Zivilisten) starben etwa im Ersten Weltkrieg?", 
+        a: ["1 Million", "5 Millionen", "17 Millionen", "50 Millionen", "100 Millionen"], 
+        c: 2, 
+        expl: "Schätzungen gehen von ca. 9-10 Mio. Soldaten und ca. 7 Mio. Zivilisten aus." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Was geschah am 11. November 1918?", 
+        a: ["Der Kaiser dankte ab", "Ausrufung der Republik", "Unterzeichnung des Waffenstillstands von Compiègne", "Beginn des Versailler Vertrags", "Matrosenaufstand in Kiel"], 
+        c: 2, 
+        expl: "Matthias Erzberger unterzeichnete den Waffenstillstand im Wald von Compiègne, was die Kampfhandlungen beendete." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Was war der 'Januarstreik' 1918?", 
+        a: ["Ein kleiner lokaler Protest", "Der größte Massenstreik des Krieges mit über 1 Million Teilnehmern", "Ein Streik der Soldaten an der Front", "Ein Bauernaufstand", "Der Beginn der Revolution"], 
+        c: 1, 
+        expl: "Die Arbeiter forderten 'Frieden ohne Annexionen', bessere Lebensmittelversorgung und Demokratisierung." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Welches Schlagwort nutzte die deutsche Propaganda, um die Moral zu stärken?", 
+        a: ["Freiheit, Gleichheit, Brüderlichkeit", "Im Felde unbesiegt", "Gott mit uns / Durchhalten", "Make Germany Great Again", "Proletarier aller Länder vereinigt euch"], 
+        c: 2, 
+        expl: "Die Propaganda appellierte an den 'Durchhaltewillen' und nutzte patriotische Parolen, auch auf Alltagsgegenständen." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Wie reagierte der Staat auf die 'Jammerbriefe' der Frauen an die Frontsoldaten?", 
+        a: ["Er schickte mehr Essen", "Er setzte Zensur ein und startete Propaganda-Kampagnen zur 'Stimmungsaufhellung'", "Er beendete den Krieg", "Er erlaubte den Frauen, die Front zu besuchen", "Er ignorierte sie"], 
+        c: 1, 
+        expl: "Die OHL fürchtete, dass die Berichte über den Hunger in der Heimat die Kampfmoral der Soldaten zersetzen würden." 
+    },
+    { 
+        cat: 'ww1', 
+        q: "Was war das Ziel des Schlieffen-Plans?", 
+        a: ["Ein Sitzkrieg im Westen", "Ein Blitzsieg gegen Frankreich, um dann Russland anzugreifen", "Ein reiner Verteidigungskrieg", "Die Eroberung Englands per Flotte", "Ein Bündnis mit den USA"], 
+        c: 1, 
+        expl: "Man wollte einen Zweifrontenkrieg vermeiden, indem man Frankreich schnell besiegt, bevor das riesige Russland mobilmachen konnte." 
+    }
 ];
 
 // ==========================================
@@ -1607,21 +1866,61 @@ function startApp(key) {
     }
 }
 
+/**
+ * Lädt den Inhalt in den Hauptbereich & erstellt den "Weiter"-Button
+ */
 function loadContent(contentId) {
     const contentArea = document.getElementById('content-display');
-    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
     
+    // 1. Menü-Aktivierung (Sidebar Highlights)
+    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
     const activeBtn = document.getElementById('nav-' + contentId);
-    if(activeBtn) activeBtn.classList.add('active');
+    if (activeBtn) activeBtn.classList.add('active');
 
+    // 2. Inhalt laden
     if (contentId.startsWith('quiz')) {
-        // Kleines Übungsquiz (alt)
+        // Falls es ein Quiz ist
         contentArea.innerHTML = `<div id="${contentId === 'quiz' ? 'quiz-container' : 'quiz-container-ww1'}"></div>`;
-        renderMiniQuiz(currentTopicKey); // Funktion umbenannt um Verwirrung zu vermeiden
+        renderMiniQuiz(currentTopicKey); 
     } else {
-        const htmlContent = database[currentTopicKey].content[contentId];
-        contentArea.innerHTML = htmlContent ? htmlContent : "<h2>Inhalt folgt...</h2>";
+        // Normalen Textinhalt holen
+        let htmlContent = database[currentTopicKey].content[contentId];
+        
+        if (!htmlContent) {
+            htmlContent = "<h2>Inhalt nicht gefunden</h2>";
+        }
+
+        // --- NEU: WEITER-BUTTON LOGIK ---
+        
+        // a) Wir holen uns die Liste aller Menüpunkte des aktuellen Themas
+        const menuItems = database[currentTopicKey].menu;
+        
+        // b) Wir suchen, an welcher Stelle (Index) wir gerade sind
+        const currentIndex = menuItems.findIndex(item => item.id === contentId);
+
+        // c) Wenn wir nicht am Ende sind, bauen wir den Button
+        if (currentIndex !== -1 && currentIndex < menuItems.length - 1) {
+            const nextItem = menuItems[currentIndex + 1];
+            
+            // HTML für den Button anhängen
+            htmlContent += `
+                <div class="nav-buttons-container">
+                    <button class="next-section-btn" onclick="loadContent('${nextItem.id}')">
+                        Weiter ➔
+                    </button>
+                </div>
+            `;
+        }
+        // -------------------------------
+
+        contentArea.innerHTML = htmlContent;
     }
+    
+    // 3. Nach oben scrollen bei neuem Inhalt (Wichtig für Mobile!)
+    contentArea.scrollTop = 0;
+    
+    // Fallback für Mobile (falls contentArea scrollt oder body scrollt)
+    window.scrollTo(0, 0);
 }
 
 function goHome() {
