@@ -190,7 +190,9 @@
             border: none;
             border-radius: 12px; font-size: 1.1rem; font-weight: 700;
             box-shadow: 0 4px 15px var(--primary-glow);
+            transition: all 0.2s;
         }
+        .next-btn:active { transform: scale(0.95); }
 
         .exam-question-text { font-size: 1.2rem; font-weight: 600; line-height: 1.5; color: white; margin-bottom: 25px; }
         .explanation-text { background: #222; padding: 15px; border-radius: 8px; margin-top: 15px; font-size: 0.95rem; }
@@ -266,7 +268,7 @@
         </div>
     </div>
 
-    <div id="app-interface">
+    <div id="app-interface" style="display:none;">
         <div class="top-bar">
             <button class="top-btn" onclick="goHome()">
                 <span style="font-size: 1.2rem;">←</span>
@@ -294,7 +296,7 @@
             <div id="exam-progress" style="color:var(--primary); font-weight:700;">1 / 20</div>
             <div style="width: 40px;"></div> </div>
         
-        <div class="content-area" style="padding-top: 120px; max-width: 600px; margin: 0 auto;">
+        <div class="content-area" style="padding-top: 100px; max-width: 600px; margin: 0 auto;">
             <div id="exam-card" class="card" style="text-align:center; border:none; background: transparent; box-shadow: none; padding: 0;">
                 </div>
             

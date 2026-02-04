@@ -2001,35 +2001,72 @@ function startGlobalExam() {
     renderExamQuestion();
 }
 
+/**
+ * Zeigt die Prüfungsfrage an, versteckt aber zunächst die Antworten
+ */
 function renderExamQuestion() {
     const qData = examSession.questions[examSession.currentIndex];
+    
+    // Das ist der Haupt-Container (die Karte)
     const container = document.getElementById('exam-card');
+    
+    // Diese Elemente holen wir uns, um sie zurückzusetzen
     const feedbackBox = document.getElementById('exam-feedback');
     const nextBtn = document.getElementById('next-q-btn');
     const progressDiv = document.getElementById('exam-progress');
 
-    // Reset UI
+    // Reset UI (Feedback und Weiter-Button ausblenden)
     feedbackBox.style.display = 'none';
     nextBtn.style.display = 'none';
-    container.innerHTML = '';
+    container.innerHTML = ''; // Alten Inhalt löschen
     
-    // Fortschrittsanzeige
+    // Fortschrittsanzeige aktualisieren
     progressDiv.innerText = `Frage ${examSession.currentIndex + 1} / 20`;
 
-    // Frage anzeigen
+    // 1. Frage-Text erstellen und anzeigen
     const qTitle = document.createElement('div');
     qTitle.className = 'exam-question-text';
     qTitle.innerText = qData.q;
-    container.appendChild(qTitle);
+    container.appendChild(qTitle); // Frage kommt direkt in den Container
 
-    // Antworten anzeigen
+    // 2. Button "Antworten einblenden" erstellen
+    const showOptionsBtn = document.createElement('button');
+    showOptionsBtn.className = 'next-btn';
+    // Styling für den Einblenden-Button (sieht etwas anders aus als der Weiter-Button)
+    showOptionsBtn.style.background = 'var(--bg-panel)';
+    showOptionsBtn.style.border = '1px solid var(--primary)';
+    showOptionsBtn.style.color = 'var(--primary)';
+    showOptionsBtn.innerText = 'Antwortoptionen einblenden';
+    
+    // 3. Container für die Antworten erstellen UND VERSTECKEN
+    const optionsContainer = document.createElement('div');
+    optionsContainer.id = 'options-container';
+    
+    // --- HIER IST DER ENTSCHEIDENDE PUNKT ---
+    optionsContainer.style.display = 'none'; // Zuerst unsichtbar machen!
+    optionsContainer.style.width = '100%';
+    optionsContainer.style.marginTop = '20px';
+
+    // 4. Antwort-Buttons erstellen
     qData.a.forEach((ans, idx) => {
         const btn = document.createElement('button');
         btn.className = 'exam-opt';
         btn.innerText = ans;
         btn.onclick = () => checkExamAnswer(btn, idx, qData);
-        container.appendChild(btn);
+        
+        // --- WICHTIG: Buttons in den optionsContainer, NICHT in container ---
+        optionsContainer.appendChild(btn); 
     });
+
+    // 5. Klick-Event: Wenn man auf "Einblenden" klickt
+    showOptionsBtn.onclick = () => {
+        showOptionsBtn.style.display = 'none';   // Einblenden-Button weg
+        optionsContainer.style.display = 'block'; // Antworten-Container da
+    };
+
+    // Erst den Button, dann den (noch unsichtbaren) Container anhängen
+    container.appendChild(showOptionsBtn);
+    container.appendChild(optionsContainer);
 }
 
 function checkExamAnswer(selectedBtn, selectedIdx, qData) {
