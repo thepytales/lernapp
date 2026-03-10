@@ -2501,3 +2501,16 @@ Unbekannter Fotograf (o. D.) Adelheid, Kaiserin, geb. Prinzessin von Burgund.`;
         alert('Kopieren fehlgeschlagen. Bitte überprüfen Sie die Berechtigungen Ihres Browsers.');
     });
 }
+
+// Globale Funktion für das Personenregister (Akkordeon)
+function togglePerson(btn) {
+    // Alle Inhalte schließen
+    document.querySelectorAll('.person-content').forEach(content => {
+        if (content !== btn.nextElementSibling) {
+            content.style.display = 'none';
+        }
+    });
+    // Den aktuellen auf- oder zuklappen
+    const content = btn.nextElementSibling;
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
