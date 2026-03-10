@@ -30,8 +30,14 @@ const database = {
             { id: "o3_italien2", title: "23. Otto III.: Zweiter Italienzug" },
             { id: "o3_osten", title: "24. Otto III.: Aktivitäten im Osten" },
             { id: "o3_tod", title: "25. Otto III.: Rückkehr & Tod" },
-            { id: "tree", title: "26. Interaktiver Stammbaum" },
-            { id: "quiz", title: "27. Prüfungstraining" }
+            { id: "adelheid_1", title: "26. Deep Dive: Adelheids Aufstieg & Italien" },
+            { id: "adelheid_2", title: "27. Deep Dive: Adelheids Macht & Krönung" },
+            { id: "adelheid_3", title: "28. Deep Dive: Adelheids späte Jahre" },
+            { id: "theophanu_1", title: "29. Deep Dive: Theophanus Herkunft" },
+            { id: "theophanu_2", title: "30. Deep Dive: Theophanu als Kaiserin" },
+            { id: "frauen_fazit", title: "31. Fazit: Frauenbild & Kunst" },
+            { id: "exkurs_kontrafaktisch", title: "32. Exkurs: Kontrafaktisches Szenario" },
+            { id: "tree", title: "33. Personenregister" }
         ],
         content: {
             gen: `
@@ -133,13 +139,13 @@ const database = {
                         <li>Bruder Heinrich muss sich Otto unterwerfen</li>
                     </ul>
 
-                    <p><span class="highlight">Ergebnis:</span> Herzogtum Franken fiel Otto I. zu (zusätzlich zu Sachsen)</p>
+                    <p><span class="highlight">Ergebnis (939):</span> Das Herzogtum Franken fiel nach dem Aufstand direkt an Otto I. (zusätzlich zu Sachsen), um seine Machtbasis massiv zu stärken.</p>
 
                     <h3>Konflikt mit den Slawen</h3>
                     <p>Ottos Verbündeter = <span class="highlight">Markgraf Gero der Große</span> (Ostsächsisch)</p>
                     <ul>
                         <li>Verteidigung + Unterwerfung des Gebietes bis zur Oder gegen die Slawen</li>
-                        <li><span class="important">Um Rache zu verhindern:</span> 30 Slawenfürsten im Schlaf getötet</li>
+                        <li><span class="important">Um Rache zu verhindern:</span> Markgraf Gero ließ 30 Slawenfürsten unter einem Vorwand zu einem Festmahl einladen und dort heimtückisch im Schlaf ermorden.</li>
                         <li>Bei den Gefechten → viele Verluste (vor allem bei sächsischen Fürsten)</li>
                         <li>Konflikt der Fürsten mit Markgrafen und gegen dessen Verbündeten Otto I.</li>
                     </ul>
@@ -798,7 +804,7 @@ const database = {
                     <h2>Otto II.: Slawenaufstand</h2>
                     
                     <h3>Der große Aufstand (983)</h3>
-                    <p>983 erhoben sich die slawischen Stämme östlich der Elbe</p>
+                    <p>983 erhoben sich die slawischen Stämme östlich der Elbe. <span class="highlight">Auslöser</span> für den Aufstand war die Nachricht von der Schwäche des kaiserlichen Heeres nach der katastrophalen Niederlage Ottos II. in Süditalien (Kap Colonna), was die Stämme massiv ermutigte.</p>
                     
                     <div class="info-block">
                         <ul>
@@ -970,7 +976,7 @@ const database = {
                     <h3>Neuer Papst</h3>
                     <p>Papst Gregor stirbt kurz danach</p>
                     <ul>
-                        <li>Vertrauter Ottos (<span class="highlight">Silvester II.</span>) erneut als Nichtrömer zum Papst</li>
+                        <li>Der hochgelehrte Mathematiker und ehemalige Lehrer Ottos, <span class="highlight">Gerbert von Aurillac</span>, wurde als <span class="important">Silvester II.</span> erneut als Nichtrömer zum Papst erhoben.</li>
                     </ul>
                 </div>`,
             o3_osten: `
@@ -1037,28 +1043,298 @@ const database = {
                         </ul>
                     </div>
                 </div>`,
-            tree: `
+            adelheid_1: `
                 <div class="card">
-                    <h2>Stammbaum der Ottonen</h2>
-                    <div class="stammbaum-wrap">
-                        <div style="min-width: 600px">
-                            <div class="node">Heinrich I. & Mathilde</div><br>
-                            <span style="color:var(--primary)">──────────┬──────────</span><br>
-                            <div class="node king">Otto I. (der Große)</div>
-                            <div class="node">Heinrich (Bayern)</div>
-                            <div class="node">Gerberga</div><br>
-                            <span style="color:var(--primary)">│ (mit Adelheid)</span><br>
-                            <div class="node king">Otto II.</div><br>
-                            <span style="color:var(--primary)">│ (mit Theophanu)</span><br>
-                            <div class="node king">Otto III.</div><br>
-                            <div class="info-block" style="border:none; text-align:center;">
-                                <p>Otto I. hatte zudem einen unehelichen Sohn: <span class="highlight">Wilhelm</span> (Erzbischof Mainz)</p>
-                                <p>Nach Otto III. folgte <span class="highlight">Heinrich II.</span> (1002-1024), der letzte Liudolfinger</p>
-                            </div>
-                        </div>
+                    <h2>Deep Dive: Adelheids Aufstieg & Italien (ab 930)</h2>
+                    <h3>Die frühe Prägung</h3>
+                    <p>Adelheid wurde <span class="highlight">930 geboren</span> und war die Tochter von König Rudolf II. aus Hochburgund. Nachdem ihr leiblicher Vater verstarb, wurde ihre Mutter im Alter von sieben Jahren Adelheids gezwungen, König Hugo II. zu heiraten. Adelheid selbst musste sich mit dessen Sohn Lothar verloben.</p>
+                    <div class="info-block">
+                        <p>Durch die politische Erziehung an Hugos Hof in Pavia reifte sie zu einer hervorragenden Herrscherin heran. <span class="important">937 heiratete sie Lothar</span> und erhielt beachtliche Ländereien. Nach dem Tod ihrer Mutter 966 kamen weitere riesige Besitztümer hinzu, die ihre Machtposition festigten.</p>
+                    </div>
+
+                    <h3>Herrschaft in Italien und Flucht</h3>
+                    <ul>
+                        <li>Bereits ab <span class="highlight">947</span> führte sie gemeinsam mit Lothar als gleichberechtigte Herrscherin die politischen Belange in Italien.</li>
+                        <li>Nach Lothars plötzlichem Tod <span class="highlight">950</span> musste sie vor Graf Berengar von Ivrea fliehen, der sie einsperren lassen wollte, um über sie die italienische Königskrone zu erlangen.</li>
+                        <li>Otto I. griff ein, vertrieb Berengar aus Pavia und heiratete Adelheid <span class="important">951</span>. Dies brachte Otto I. die lang ersehnte Königswürde Italiens und später den Anspruch auf die Kaiserkrone.</li>
+                    </ul>
+                </div>`,
+            adelheid_2: `
+                <div class="card">
+                    <h2>Deep Dive: Adelheids Macht & Kaiserkrönung</h2>
+                    <h3>Die Mitkaiserin (962)</h3>
+                    <p>Die Hochzeit mit Otto I. löste den Aufstand seines Sohnes Liudolf aus, stärkte jedoch die Stellung Adelheids enorm. Otto profitierte stark von ihr, weshalb sie eine beispiellose Teilhabe an der Macht erhielt.</p>
+                    <div class="info-block">
+                        <p><span class="important">Die Krönung 962:</span> Adelheid wurde vom Papst an der Seite Ottos ebenfalls zur Kaiserin gekrönt. Sie agierte unter dem Titel <span class="highlight">consors regni</span> (gemeinsam oder gleichwertig regierend).</p>
+                    </div>
+
+                    <h3>Netzwerke und Entmachtung unter Otto II.</h3>
+                    <p>Adelheid nutzte ihre immensen Besitztümer und ihr Geschick, um das ottonische Religionsnetzwerk auszubauen. Doch nach dem Tod Ottos I. (973) wendete sich das Blatt:</p>
+                    <ul>
+                        <li>Durch die Ehe von Otto II. mit der byzantinischen Prinzessin Theophanu verlor Adelheid zunehmend an Einfluss.</li>
+                        <li>Theophanu übernahm sogar die Rolle als Diplomatin in Italien, die Adelheid zuvor innehatte.</li>
+                        <li>Adelheid wurde fortlaufend verdrängt und zog sich nach Pavia zurück, bis es 979 auf dem Italienzug Ottos II. zu einer Versöhnung kam.</li>
+                    </ul>
+                </div>`,
+            adelheid_3: `
+                <div class="card">
+                    <h2>Deep Dive: Adelheids späte Jahre und Regentschaft</h2>
+                    <h3>Rettung der Dynastie (ab 983)</h3>
+                    <p>Nach dem frühen Tod Ottos II. 983 stieg Theophanu zur alleinigen Kaiserin auf. Der Usurpator Heinrich der Zänker riss jedoch den dreijährigen Otto III. an sich. In dieser Krise war Theophanu völlig auf die weitreichenden politischen Beziehungen von Adelheid angewiesen.</p>
+                    <div class="info-block">
+                        <p>Durch Adelheids Eingreifen und die Hilfe von Verbündeten (wie Konrad von Schwaben) konnte Heinrich besänftigt werden. Im Zuge dieser Taten erhielt Adelheid in der Literatur den herausragenden Titel <span class="highlight">"Mutter der Königreiche"</span>.</p>
+                    </div>
+
+                    <h3>Die alleinige Regentschaft (991-994)</h3>
+                    <p>In den Jahren nach der Krise wurde die erfahrene Adelheid von der jüngeren Theophanu schnell wieder aus der Politik gedrängt. Die Spannungen zwischen beiden Frauen waren groß. Doch als Theophanu <span class="highlight">991</span> früh verstarb, übernahm Adelheid als Großmutter die alleinige Regentschaft für Otto III.</p>
+                    <ul>
+                        <li>Sie führte das Reich erfolgreich bis zu dessen Volljährigkeit.</li>
+                        <li>Sie überlebte Otto I., Otto II. und Theophanu und starb erst <span class="important">999</span>, hochverehrt als die am meisten geschätzte Machthaberin ihrer Zeit.</li>
+                    </ul>
+                </div>`,
+            theophanu_1: `
+                <div class="card">
+                    <h2>Deep Dive: Theophanus Herkunft & Byzanz-Politik</h2>
+                    <h3>Die Prinzessin aus Byzanz (ab 967)</h3>
+                    <p>Forschungsergebnisse deuten darauf hin, dass Theophanu zwischen <span class="highlight">955 und 960</span> geboren wurde. Sie war die Nichte des byzantinischen Kaisers <span class="important">Johannes Tzimiskes</span>. Bereits 967 heiratete sie im Kindesalter den Mitkaiser Otto II. Die Hochzeit und ihre Kaiserkrönung durch Papst Johannes XIII. fanden <span class="important">972</span> statt.</p>
+                    <div class="info-block">
+                        <p>Ihre fehlende direkte kaiserliche Herkunft stieß bei vielen Adeligen im Reich auf Kritik. Für Otto I. war die Wahl jedoch pures Kalkül:</p>
+                        <ul>
+                            <li>Theophanu fungierte als tragendes Bindeglied, um die Beziehungen zu Byzanz zu verbessern.</li>
+                            <li>Das byzantinische Weltkaisertum erkannte durch diese Vermählung das ottonische Kaisertum als "überhöhtes Königtum" an (wenn auch dem byzantinischen untergeordnet).</li>
+                        </ul>
                     </div>
                 </div>`,
-            quiz: `<div id="quiz-container"></div>`
+            theophanu_2: `
+                <div class="card">
+                    <h2>Deep Dive: Theophanu als Kaiserin & Regentin</h2>
+                    <h3>Aufstieg und Konkurrenz zu Adelheid</h3>
+                    <p>Nach der Heirat baute Theophanu ihre Macht massiv aus. Viele Dokumente belegen, wie sie Adelheid systematisch aus der Politik und der Italien-Diplomatie verdrängte. Auch ihr wurde der Titel <span class="highlight">consors regni</span> zuteil.</p>
+                    <div class="info-block">
+                        <p><span class="important">Kontroverses Bild:</span> Theophanu war nicht unumstritten. In zeitgenössischen Texten wurde sie als machtbesessen dargestellt und sogar als "Diebin" der kaiserlichen Witwenposition (bezogen auf Adelheid) betitelt. Ihr politisches Handeln wurde möglicherweise auch beratend vom kaiserlichen Erzkanzler Willigis beeinflusst.</p>
+                    </div>
+
+                    <h3>Die Regentin (983-991)</h3>
+                    <p>Nach dem Tod Ottos II. 983 stieg sie zur alleinigen Kaiserin auf. Obwohl sie den Thronstreit mit Heinrich dem Zänker nur durch Adelheids Hilfe überstand, verdrängte sie Adelheid kurz darauf erneut von der Macht.</p>
+                    <ul>
+                        <li>Sie verfügte über enorme Macht, traf tragende Entscheidungen und vergab sogar Lehen.</li>
+                        <li>Trotz der Spannungen führte sie eine überwiegend konfliktarme Politik für ihren minderjährigen Sohn.</li>
+                        <li>Sie starb früh im Jahr <span class="important">991</span>.</li>
+                    </ul>
+                </div>`,
+            frauen_fazit: `
+                <div class="card">
+                    <h2>Fazit: Frauenbild & Darstellung in der Kunst</h2>
+                    <h3>Gleichberechtigung im ottonischen Reich</h3>
+                    <p>Die Stellung von Frauen in der ottonischen Zeit war auffallend gleichberechtigt zu der von Männern. Dies lässt sich nicht nur an Titeln wie <i>regnorum nostrum</i> ablesen, sondern zeigt sich massiv in der Kunst der Epoche.</p>
+                    <div class="info-block">
+                        <p><span class="important">Beweise aus der Kunst:</span></p>
+                        <ul>
+                            <li>Mehr als <span class="highlight">ein Viertel aller Herrscherportraits</span> aus dieser Zeit zeigen Frauen in Machtpositionen!</li>
+                            <li>Ein aufwendiger Kircheneingang zeigt Otto I. und Adelheid zusammen und völlig gleichberechtigt auf einer Stufe.</li>
+                            <li>Eine berühmte Elfenbeinplatte zeigt Otto II. und Theophanu gleich groß, auf gleicher Höhe, unter dem Schutz Gottes.</li>
+                        </ul>
+                    </div>
+                </div>`,
+            exkurs_kontrafaktisch: `
+                <div class="card">
+                    <h2>Exkurs: Das kontrafaktische Szenario</h2>
+                    <p><em>Theoretische Überlegung: Was wäre gewesen, wenn Otto II. keinen männlichen Nachfolger (Otto III.) gezeugt hätte oder dieser als Kleinkind gestorben wäre?</em></p>
+                    
+                    <h3>Die Rolle der Frauen in diesem Szenario</h3>
+                    <div class="info-block">
+                        <ul>
+                            <li><span class="highlight">Theophanu:</span> Ohne Sohn hätte sie kaum eine gefestigte Machtbasis gehabt. Sie verfügte über zu wenig eigene diplomatische Verbindungen im Reich und hätte ihre Position vermutlich komplett verloren (evtl. Rückzug oder Neuheirat).</li>
+                            <li><span class="highlight">Adelheid:</span> Sie hätte aufgrund ihrer massiven Besitztümer und ihres starken Kontaktnetzwerks weiterhin eine tragende Rolle spielen können. Eine kurzzeitige Alleinherrschaft gilt zwar als unwahrscheinlich, aber als diplomatische "Königsmacherin" wäre sie unersetzlich gewesen.</li>
+                        </ul>
+                    </div>
+
+                    <h3>Wer hätte den Thron übernommen? Eine Kandidatenanalyse:</h3>
+                    <ul>
+                        <li><strong>Konrad von Burgund / Rudolf III.:</strong> Adelheids Bruder und dessen Sohn. Kein direkter Thronanspruch, eher treue Verbündete. (Ausgeschlossen)</li>
+                        <li><strong>Karl & Otto von Niederlothringen:</strong> Karolinger, fokussierten sich ausschließlich auf Prätendenten-Kämpfe im westfränkischen Reich. (Ausgeschlossen)</li>
+                        <li><strong>Konrad von Schwaben / Hermann II.:</strong> Konradiner ohne Thronanspruch, unterstützten im realen Streit Adelheid. (Ausgeschlossen)</li>
+                        <li><strong>Otto von Worms (Kärnten):</strong> Hätte einen Anspruch gehabt, bewies aber im Jahr 1002 (als er real auf den Thron verzichtete), dass er keine kaiserlichen Ambitionen hegte. (Unwahrscheinlich)</li>
+                        <li><strong>Heinrich II. (der spätere Kaiser):</strong> Zum Zeitpunkt des Todes von Otto II. noch zu jung. (Ausgeschlossen)</li>
+                        <li><span class="important">Heinrich der Zänker:</span> Die absolute Konstante! Er hatte das größte Potenzial, den Thron zu übernehmen. Er stand ohnehin im Konflikt mit Otto II. und versuchte realhistorisch 984 die Macht zu greifen. Unter ihm hätte Adelheid diplomatisch wirken können, Theophanu jedoch nicht.</li>
+                    </ul>
+                    <p><strong>Fazit des Exkurses:</strong> Heinrich der Zänker hätte die Macht wohl übernommen. Ignoriert man ihn kontrafaktisch, hätte es durch das Desinteresse von Otto von Worms ein gewaltiges Machtvakuum gegeben, das Adelheid potenziell als Übergangsregentin hätte füllen können.</p>
+                </div>`,
+            tree: `
+                <div class="card">
+                    <h2>Wichtige Personen der Ottonenzeit</h2>
+                    <p>Klicken Sie auf eine Person, um detaillierte Informationen zu erhalten.</p>
+                    
+                    <style>
+                        .person-btn {
+                            width: 100%; text-align: left; padding: 15px; margin-top: 10px;
+                            background: #25262b; border: 1px solid var(--border);
+                            color: white; font-size: 1.1rem; border-radius: 8px;
+                            cursor: pointer; transition: 0.2s;
+                        }
+                        .person-btn:focus { outline: none; border-color: var(--primary); }
+                        .person-content {
+                            display: none; background: rgba(62, 179, 140, 0.05);
+                            padding: 15px; border-left: 3px solid var(--primary);
+                            margin-bottom: 10px; border-radius: 0 8px 8px 0;
+                            font-size: 0.95rem; line-height: 1.5; color: #ddd;
+                        }
+                    </style>
+
+                    <button class="person-btn" onclick="togglePerson(this)">Heinrich I.</button>
+                    <div class="person-content">
+                        <ul>
+                            <li>Begründer der ottonischen Dynastie</li>
+                            <li>König des Ostfrankenreiches ab 919</li>
+                            <li>Beendete die Tradition der fränkischen Reichsteilung</li>
+                            <li>Vater von Otto I. und Heinrich von Bayern</li>
+                            <li>Bestimmte Otto I. zum alleinigen Nachfolger</li>
+                            <li>Führte erfolgreiche Abwehrkämpfe gegen Slawen und Ungarn</li>
+                            <li>Erwarb die Heilige Lanze vom König von Burgund</li>
+                            <li>Starb am 2. Juli 936 in der Pfalz Memleben</li>
+                        </ul>
+                    </div>
+
+                    <button class="person-btn" onclick="togglePerson(this)">Mathilde</button>
+                    <div class="person-content">
+                        <ul>
+                            <li>Zweite Ehefrau von Heinrich I.</li>
+                            <li>Mutter von Otto I. und Heinrich (Bayern)</li>
+                            <li>Gründerin bedeutender Klöster, u.a. Quedlinburg</li>
+                            <li>Bevorzugte ihren Sohn Heinrich bei der Thronfolge</li>
+                            <li>Wurde zeitweise von Otto I. ihrer Macht beraubt</li>
+                            <li>Spielte eine zentrale Rolle im religiösen Netzwerk</li>
+                            <li>Wurde später als Heilige verehrt</li>
+                            <li>Starb 968 im Kloster Quedlinburg</li>
+                        </ul>
+                    </div>
+
+                    <button class="person-btn" onclick="togglePerson(this)">Otto I. (der Große)</button>
+                    <div class="person-content">
+                        <ul>
+                            <li>Sohn von Heinrich I., geboren 912</li>
+                            <li>König ab 936, gekrönt in Aachen</li>
+                            <li>Besiegte die Ungarn 955 endgültig auf dem Lechfeld</li>
+                            <li>Erlangte durch Heirat mit Adelheid 951 die Krone Italiens</li>
+                            <li>Wurde 962 vom Papst zum Kaiser gekrönt</li>
+                            <li>Setzte Päpste nach eigenen Vorstellungen ab und ein</li>
+                            <li>Gründete das Erzbistum Magdeburg</li>
+                            <li>Starb am 7. Mai 973 in Memleben</li>
+                        </ul>
+                    </div>
+
+                    <button class="person-btn" onclick="togglePerson(this)">Adelheid von Burgund</button>
+                    <div class="person-content">
+                        <ul>
+                            <li>Geboren 930, Tochter des Königs von Hochburgund</li>
+                            <li>Zweite Ehefrau von Otto I. (Hochzeit 951)</li>
+                            <li>Wurde 962 als erste Frau mit zum Kaiser gekrönt</li>
+                            <li>Trug den Titel "consors regni" (Mitregentin)</li>
+                            <li>Sicherte die Thronfolge für Otto III. gegen Heinrich den Zänker</li>
+                            <li>Übernahm nach Theophanus Tod die alleinige Regentschaft</li>
+                            <li>Verfügte über enorme eigene Güter und kirchliche Netzwerke</li>
+                            <li>Wurde später heiliggesprochen</li>
+                        </ul>
+                    </div>
+
+                    <button class="person-btn" onclick="togglePerson(this)">Liudolf</button>
+                    <div class="person-content">
+                        <ul>
+                            <li>Sohn Ottos I. aus erster Ehe mit Edgitha</li>
+                            <li>Wurde 946 von Otto I. als Thronfolger designiert</li>
+                            <li>Rebellierte massiv gegen seinen Vater nach dessen Heirat mit Adelheid</li>
+                            <li>Verbündete sich mit Konrad dem Roten gegen Otto</li>
+                            <li>Verlor Anhänger, nachdem er sich mit den Ungarn verbündete</li>
+                            <li>Unterwarf sich 954 seinem Vater und wurde begnadigt</li>
+                            <li>Kämpfte später in Italien für die Interessen seines Vaters</li>
+                            <li>Starb früh an einer Krankheit im Jahr 957</li>
+                        </ul>
+                    </div>
+
+                    <button class="person-btn" onclick="togglePerson(this)">Heinrich der Zänker</button>
+                    <div class="person-content">
+                        <ul>
+                            <li>Herzog von Bayern, Neffe Ottos I.</li>
+                            <li>Rebellierte wiederholt gegen Otto II.</li>
+                            <li>Wurde von Otto II. abgesetzt und inhaftiert</li>
+                            <li>Versuchte nach dem Tod Ottos II. 984 die Vormundschaft über Otto III. zu erzwingen</li>
+                            <li>Verlangte faktisch selbst die Königskrone</li>
+                            <li>Musste sich schließlich Adelheid und Theophanu beugen</li>
+                            <li>Wurde begnadigt und erhielt Bayern zurück</li>
+                            <li>Starb 995</li>
+                        </ul>
+                    </div>
+
+                    <button class="person-btn" onclick="togglePerson(this)">Otto II.</button>
+                    <div class="person-content">
+                        <ul>
+                            <li>Sohn Ottos I. und Adelheids, geboren 955</li>
+                            <li>Wurde bereits als Kind (961) zum Mitkönig ernannt</li>
+                            <li>Heiratete 972 die byzantinische Prinzessin Theophanu</li>
+                            <li>Regierte nach dem Tod seines Vaters hart und kompromisslos</li>
+                            <li>Beanspruchte den Titel "Kaiser der Römer"</li>
+                            <li>Erlitt 982 eine katastrophale Niederlage in Süditalien gegen die Sarazenen</li>
+                            <li>Bestimmte auf dem Hoftag 983 seinen dreijährigen Sohn zum Nachfolger</li>
+                            <li>Starb im Dezember 983 in Rom an Malaria</li>
+                        </ul>
+                    </div>
+
+                    <button class="person-btn" onclick="togglePerson(this)">Theophanu</button>
+                    <div class="person-content">
+                        <ul>
+                            <li>Nichte des byzantinischen Kaisers Johannes Tzimiskes</li>
+                            <li>Heiratete Otto II. 972 zur Lösung des "Zweikaiserproblems"</li>
+                            <li>Verdrängte Adelheid zunehmend aus der Politik</li>
+                            <li>Wurde nach dem Tod Ottos II. alleinige Kaiserin und Regentin</li>
+                            <li>Unterzeichnete Urkunden teils in männlicher Form als "Kaiser"</li>
+                            <li>Sicherte die Macht ihres minderjährigen Sohnes Otto III.</li>
+                            <li>Brachte byzantinische Kunst und Kultur an den deutschen Hof</li>
+                            <li>Starb früh im Jahr 991</li>
+                        </ul>
+                    </div>
+
+                    <button class="person-btn" onclick="togglePerson(this)">Otto III.</button>
+                    <div class="person-content">
+                        <ul>
+                            <li>Sohn Ottos II. und Theophanus</li>
+                            <li>Wurde im Alter von 3 Jahren zum König gewählt</li>
+                            <li>Übernahm ca. 994 selbst die Regierungsgeschäfte</li>
+                            <li>Ernannte als erster Kaiser einen nicht-italienischen Papst (Gregor V.)</li>
+                            <li>Ließ den römischen Stadtpräfekten Crescentius brutal hinrichten</li>
+                            <li>Führte die "Renovatio imperii Romanorum" (Erneuerung des Römerreiches) durch</li>
+                            <li>Gründete im Jahr 1000 das Erzbistum Gnesen in Polen</li>
+                            <li>Starb überraschend 1002 in Italien an Fieber</li>
+                        </ul>
+                    </div>
+
+                    <button class="person-btn" onclick="togglePerson(this)">Heinrich II.</button>
+                    <div class="person-content">
+                        <ul>
+                            <li>Sohn Heinrichs des Zänkers</li>
+                            <li>Setzte sich 1002 nach dem Tod Ottos III. als König durch</li>
+                            <li>Letzter Herrscher aus der Dynastie der Liudolfinger</li>
+                            <li>Wurde 1014 zum Kaiser gekrönt</li>
+                            <li>Bekannt für seine enge Zusammenarbeit mit der Reichskirche</li>
+                            <li>Gründete das Bistum Bamberg</li>
+                            <li>Blieb kinderlos, was das Ende der ottonischen Dynastie bedeutete</li>
+                            <li>Wurde später, ebenso wie seine Frau Kunigunde, heiliggesprochen</li>
+                        </ul>
+                    </div>
+
+                    <script>
+                        function togglePerson(btn) {
+                            // Alle Inhalte schließen
+                            document.querySelectorAll('.person-content').forEach(content => {
+                                if (content !== btn.nextElementSibling) {
+                                    content.style.display = 'none';
+                                }
+                            });
+                            // Den aktuellen auf- oder zuklappen
+                            const content = btn.nextElementSibling;
+                            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                        }
+                    </script>
+                </div>`
         }
     },
     ww1: {
@@ -1079,19 +1355,17 @@ const database = {
             { id: "proteste", title: "13. Proteste & Umschwung" },
             { id: "sozialisten", title: "14. Sozialistisches Lager" },
             { id: "januarstreik", title: "15. Januarstreik 1918 (Exkurs)" },
-            { id: "rev", title: "16. Novemberrevolution" },
-            { id: "quiz_ww1", title: "17. Prüfungstraining" }
+            { id: "rev", title: "16. Novemberrevolution" }
         ],
         content: {
             mil: `
                 <div class="card">
                     <h2>Wichtige Punkte im Kriegsverlauf</h2>
                     
-                    <h3>Kriegsbeginn (1914)</h3>
+                    <h3>Kriegsbeginn (1914) & Schlieffen-Plan</h3>
                     <p>Attentat von Sarajevo im Jahr 1914 = Deutsches Kaiserreich vs. Alliierten (zwei Fronten)</p>
                     <ul>
-                        <li><span class="highlight">Osten</span> = Russland als Gegner</li>
-                        <li><span class="highlight">Westen</span> = England, Frankreich und Belgien als Gegner</li>
+                        <li><span class="highlight">Zweifrontenkrieg vermeiden:</span> Der deutsche <span class="important">Schlieffen-Plan</span> sah vor, in einem Blitzsieg zuerst Frankreich im Westen auszuschalten, um danach das riesige Russland im Osten anzugreifen.</li>
                     </ul>
 
                     <h3>Schlacht an der Marne (1914)</h3>
@@ -1099,38 +1373,35 @@ const database = {
                         <p>Erste Erfolge der Alliierten</p>
                         <ul>
                             <li>Deutsche Kämpfer am Vorrücken in Frankreich gehindert</li>
-                            <li>Eigentlich wollte das deutsche Heer blitzartig Paris angreifen <span class="important">#Schlieffenplan</span></li>
+                            <li>Der Schlieffen-Plan scheiterte frühzeitig, der Zweifrontenkrieg war Realität.</li>
                         </ul>
                     </div>
 
                     <h3>Stellungskrieg als neue Taktik</h3>
-                    <p>Vermehrte Verluste der deutschen Armee ⇒ Stellungskrieg als neue Taktik</p>
+                    <p>Vermehrte Verluste der deutschen Armee ⇒ Stellungskrieg (Schützengräben). Es kam zu gigantischen <span class="highlight">Materialschlachten</span> (wie an der Somme), bei denen Mensch und Material rücksichtslos zur Zermürbung des Gegners eingesetzt wurden.</p>
                     <ul>
-                        <li>Sehr defensives Vorgehen</li>
-                        <li>Auf beiden Seiten der Frontlinie = Schützengräben</li>
-                        <li>An Westfront und Ostfront sehr viele Rohstoffe/Materialien verbraucht <span class="important">#Materialschlacht</span></li>
                         <li>Zahl der Opfer stieg ab 1915 stetig an</li>
-                        <li><span class="important">Ab April 1915:</span> Erster deutscher Einsatz von Giftgas ☠️</li>
+                        <li><span class="important">Ab April 1915:</span> Erster großflächiger deutscher Einsatz von Giftgas (Chlorgas) bei <span class="highlight">Ypern</span> ☠️</li>
                     </ul>
 
                     <h3>Schlacht um Verdun (1916)</h3>
                     <ul>
-                        <li>10 Monate an Kämpfen</li>
+                        <li>10 Monate an Kämpfen ("Blutmühle")</li>
                         <li>Ungefähr <span class="important">300.000 tote Soldaten</span></li>
                     </ul>
 
                     <h3>Kriegseintritt der Amerikaner (1917)</h3>
                     <ul>
-                        <li>Deutsche Siegeschancen stark reduziert</li>
-                        <li>Ab 1917 an der Ostfront Waffenstillstand</li>
+                        <li>Ausgelöst durch die deutsche Wiederaufnahme des <span class="highlight">uneingeschränkten U-Boot-Krieges</span> (auch gegen neutrale und zivile Schiffe).</li>
+                        <li>Deutsche Siegeschancen dadurch stark reduziert. Ab 1917 an der Ostfront Waffenstillstand.</li>
                     </ul>
 
                     <h3>Ende des Krieges (1918)</h3>
                     <div class="info-block">
                         <ul>
-                            <li>Im Jahr 1918 gelang den Großmächten ein Durchbruch der deutschen Front</li>
-                            <li><span class="important">11. November 1918:</span> Heeresleitung mit Waffenstillstand für Westfront</li>
-                            <li>Furchtbare Krieg forderte insgesamt ca. <span class="important">17 Millionen Zivilisten und Soldaten</span> das Leben</li>
+                            <li>Im Jahr 1918 gelang den Großmächten ein Durchbruch der deutschen Front.</li>
+                            <li><span class="important">11. November 1918:</span> Unterzeichnung des Waffenstillstands von <span class="highlight">Compiègne</span> durch den deutschen Politiker Matthias Erzberger.</li>
+                            <li>Der Krieg forderte insgesamt ca. <span class="important">17 Millionen Tote</span> (Zivilisten und Soldaten) das Leben.</li>
                         </ul>
                     </div>
                 </div>`,
@@ -1288,7 +1559,7 @@ const database = {
                     <div class="info-block">
                         <p>Deutsche Propaganda zielte auf Vermittlung von Siegessicherheit:</p>
                         <ul>
-                            <li>Gegen Kriegsende mit Appell an Durchhaltewillen</li>
+                            <li>Gegen Kriegsende Appell an den Durchhaltewillen, geprägt von patriotischen Schlagworten wie <span class="highlight">"Gott mit uns"</span> oder "Im Felde unbesiegt".</li>
                             <li>Teilweise Verunglimpfung deutscher Kriegsgegner auf Postkarten etc.</li>
                             <li><span class="important">Feind lächerlich machen war essentiell #Stereotypen</span></li>
                         </ul>
@@ -1416,7 +1687,7 @@ const database = {
                     <h2>Das Sozialistische Lager in Bewegung</h2>
                     <p>Die politische Landschaft radikalisierte sich angesichts des Elends.</p>
                     <ul>
-                        <li><span class="highlight">Gründung der USPD (1917):</span> Offene Opposition gegen das Herrschaftssystem und die Kriegspolitik.</li>
+                        <li><span class="highlight">Gründung der USPD (1917):</span> Offene Opposition gegen das Herrschaftssystem. Die USPD spaltete sich von der SPD ab, da sie die <span class="important">Bewilligung weiterer Kriegskredite ablehnte</span> und damit bewusst den kaisertreuen "Burgfrieden" brach.</li>
                         <li><span class="highlight">Gewerkschaften:</span> Erhielten erstmals staatliche Anerkennung. Betriebe mit über 50 Angestellten mussten Arbeitervertreter zulassen.</li>
                     </ul>
                     <p><span class="important">Die Prophezeiung:</span> Philipp Scheidemann sagte bereits 1917 vor dem Parlament eine soziale Revolution voraus, falls der Krieg nicht beendet würde.</p>
@@ -1425,11 +1696,12 @@ const database = {
                 <div class="card">
                     <h2>Exkurs: Januarstreik 1918</h2>
                     <div class="info-block">
-                        Politischer Massenstreik infolge schlechter Versorgung, Heranziehung zum Arbeitsdienst und unwürdiger Arbeitsbedingungen.
+                        Der größte politische Massenstreik des Krieges infolge schlechter Versorgung, Heranziehung zum Arbeitsdienst und unwürdiger Arbeitsbedingungen.
                     </div>
                     <ul>
-                        <li>Initiiert durch den <span class="important">Spartakusbund</span> und Metallarbeiter.</li>
-                        <li>Über <span class="highlight">400.000 Demonstranten</span> allein in Berlin.</li>
+                        <li>Initiiert aus dem Verborgenen durch die <span class="important">"Revolutionären Obleute"</span> (eine Gruppe unabhängiger Gewerkschafter) sowie den Spartakusbund.</li>
+                        <li>Forderungen unter anderem: "Frieden ohne Annexionen" sowie Demokratisierung.</li>
+                        <li>Über <span class="highlight">400.000 Demonstranten allein in Berlin</span> (landesweit streikten sogar über 1 Million Arbeiter).</li>
                         <li>Führung durch SPD und USPD im Aktionsausschuss.</li>
                         <li>Die Proteste wurden gewaltsam aufgelöst.</li>
                         <li>Rechte Parteien nutzten dies später für den <span class="important">Dolchstoß-Vorwurf</span> (SPD habe die Front im Stich gelassen).</li>
@@ -1441,8 +1713,8 @@ const database = {
                     <p>Ausgangslage im Oktober 1918: Die militärische Lage war aussichtslos.</p>
                     <h3>Chronologie des Umbruchs:</h3>
                     <ul>
-                        <li><span class="important">30. Oktober 1918:</span> Matrosen verweigern den Gehorsam (Matrosenaufstand).</li>
-                        <li><span class="important">9. November 1918:</span> Doppelte Ausrufung der Republik durch Philipp Scheidemann (SPD) und Karl Liebknecht (Spartakusbund). Der Kaiser dankt ab.</li>
+                        <li><span class="important">30. Oktober 1918:</span> Die Marineführung gab den sinnlosen Befehl zu einer allerletzten Entscheidungsschlacht gegen die britische Flotte ("Feuer aus!"). Daraufhin verweigerten die Matrosen in Kiel den Gehorsam (<span class="highlight">Kieler Matrosenaufstand</span>).</li>
+                        <li><span class="important">9. November 1918:</span> Doppelte Ausrufung der Republik durch Philipp Scheidemann (bürgerliche Republik, SPD) und Karl Liebknecht (sozialistische Republik, Spartakusbund). Der Kaiser dankt ab.</li>
                         <li><span class="highlight">Januar 1919:</span> Spartakusaufstand in Berlin.</li>
                         <li><span class="important">Ermordung</span> von Karl Liebknecht und Rosa Luxemburg durch Regierungstruppen.</li>
                         <li>Wahl der Nationalversammlung zur Gründung der ersten deutschen Demokratie.</li>
@@ -1824,7 +2096,36 @@ const examPool = [
         a: ["Ein Sitzkrieg im Westen", "Ein Blitzsieg gegen Frankreich, um dann Russland anzugreifen", "Ein reiner Verteidigungskrieg", "Die Eroberung Englands per Flotte", "Ein Bündnis mit den USA"], 
         c: 1, 
         expl: "Man wollte einen Zweifrontenkrieg vermeiden, indem man Frankreich schnell besiegt, bevor das riesige Russland mobilmachen konnte." 
-    }
+    },
+    { cat: 'ottonen', q: "Aus welchem Gebiet stammte Kaiserin Adelheid ursprünglich?", a: ["Sachsen", "Königreich Burgund", "Byzanz", "Westfrankenreich", "England"], c: 1, expl: "Adelheid war die Tochter von Rudolf II. aus dem Königreich Burgund." },
+    { cat: 'ottonen', q: "Warum war die Heirat mit Adelheid 951 für Otto I. strategisch so wichtig?", a: ["Wegen ihres Reichtums", "Sie brachte die Herrschaft über das Königreich Italien", "Zur Friedenssicherung mit England", "Um den Papst zu besänftigen", "Um Byzanz zu erobern"], c: 1, expl: "Als Witwe von Lothar II. war Adelheid der politische Schlüssel zur Herrschaft über Oberitalien." },
+    { cat: 'ottonen', q: "Was war das historische Novum bei der Kaiserkrönung 962 in Bezug auf Adelheid?", a: ["Sie lehnte die Krone ab", "Sie wurde gemeinsam mit Otto I. zur Kaiserin gekrönt", "Sie durfte den Papst wählen", "Sie krönte sich selbst", "Sie wurde vom byzantinischen Kaiser gekrönt"], c: 1, expl: "Dass eine Ehefrau zeitgleich mit ihrem Mann vom Papst zur Kaiserin erhoben wurde, gab es zuvor nicht." },
+    { cat: 'ottonen', q: "Wer war Theophanu?", a: ["Eine angelsächsische Prinzessin", "Eine Nichte des byzantinischen Kaisers Johannes Tzimiskes", "Die Tochter von Berengar II.", "Eine Nonne aus Gandersheim", "Eine slawische Herrscherin"], c: 1, expl: "Sie kam 972 aus Byzanz, um durch Heirat das Zweikaiserproblem zu entspannen." },
+    { cat: 'ottonen', q: "Welches Problem sollte durch die Heirat von Otto II. und Theophanu gelöst werden?", a: ["Der Slawenaufstand", "Das Zweikaiserproblem und der Konflikt in Süditalien", "Der Investiturstreit", "Der Mangel an Erben", "Der Aufstand Heinrich des Zänkers"], c: 1, expl: "Byzanz erkannte durch die Heirat de facto das westliche Kaisertum der Ottonen an." },
+    { cat: 'ottonen', q: "Welchen Titel führten Adelheid und Theophanu, der ihre starke Rolle betonte?", a: ["Ancilla domini", "Consors regni (Teilhaberin an der Herrschaft)", "Regina sola", "Dux bavariae", "Comes palatinus"], c: 1, expl: "Der Titel 'consors regni' unterstrich, dass sie nicht nur Gattinnen waren, sondern aktiv an der Herrschaft teilhatten." },
+    { cat: 'ottonen', q: "Wer übernahm nach dem Tod Ottos II. (983) die Vormundschaft und Regentschaft für den minderjährigen Otto III.?", a: ["Markgraf Gero", "Heinrich der Zänker dauerhaft", "Zunächst Theophanu (bis 991), dann Adelheid (bis 994)", "Papst Johannes XV.", "Der Bischof von Mainz"], c: 2, expl: "Theophanu und Adelheid stützten als 'dominae imperiales' das Reich während der Minderjährigkeit des Königs." },
+    { cat: 'ottonen', q: "Wie unterzeichnete Theophanu zeitweise offizielle Urkunden, um ihre Machtstellung zu bekräftigen?", a: ["Als 'Gottes Magd'", "Als 'imperator augustus' (in der männlichen Form)", "Als 'Königin der Deutschen'", "Gar nicht, Frauen durften nicht unterschreiben", "Als 'Statthalterin Roms'"], c: 1, expl: "Um ihre unangefochtene und befehlende Autorität zu demonstrieren, wählte sie die männliche Kaiser-Titulatur." },
+    { cat: 'ottonen', q: "Wie lässt sich die Politik Theophanus während ihrer Regentschaft charakterisieren?", a: ["Kriegslüstern und expansiv", "Bemüht um inneren Frieden und konfliktarm", "Streng antikirchlich", "Sie konzentrierte sich nur auf Italien", "Sie regierte diktatorisch ohne Berater"], c: 1, expl: "Sie versuchte, Streitereien im Reich diplomatisch zu schlichten und den Herrschaftsanspruch ihres Sohnes zu bewahren." },
+    { cat: 'ottonen', q: "Wer versuchte 984 vergeblich, Theophanu die Macht über Otto III. zu entreißen?", a: ["Konrad der Rote", "Eberhard von Franken", "Heinrich der Zänker", "Lothar von Frankreich", "Papst Benedikt V."], c: 2, expl: "Heinrich der Zänker versuchte die Vormundschaft an sich zu reißen, musste das Kind aber letztlich an die Frauen übergeben." },
+    { cat: 'ottonen', q: "Welcher klösterlichen Reformbewegung stand Adelheid besonders nahe?", a: ["Der Hirsauer Reform", "Der Cluniazensischen Reform", "Den Zisterziensern", "Den Franziskanern", "Den Templern"], c: 1, expl: "Adelheid förderte die Ideale von Cluny stark und verließ sich auf deren geistliche Unterstützung." },
+    { cat: 'ottonen', q: "Was geschah mit Adelheid im Jahr 1097?", a: ["Sie wurde aus Urkunden gestrichen", "Sie wurde durch Papst Urban II. heiliggesprochen", "Ihre Gebeine wurden nach Byzanz überführt", "Sie wurde posthum verurteilt", "Sie erhielt ein Denkmal in Rom"], c: 1, expl: "Wegen ihrer Frömmigkeit und Förderung der Klöster wurde sie heiliggesprochen." },
+    { cat: 'ottonen', q: "Welchen kulturellen Einfluss brachte Theophanu an den ottonischen Hof?", a: ["Isländische Sagas", "Byzantinisches Hofzeremoniell und neue Kunstformen (z.B. Elfenbeinschnitzerei)", "Die gotische Baukunst", "Den Buchdruck", "Französische Troubadourlyrik"], c: 1, expl: "Als byzantinische Prinzessin prägte sie die Kultur des ostfränkischen Hofes tiefgreifend." },
+    { cat: 'ottonen', q: "Wie endete das Leben von Kaiserin Theophanu?", a: ["Sie wurde im Kampf getötet", "Sie starb früh eines natürlichen Todes im Juni 991", "Sie wurde von Adelheid vergiftet", "Sie kehrte nach Byzanz zurück", "Sie fiel einem Attentat zum Opfer"], c: 1, expl: "Sie verstarb in Nimwegen. Ihre Schwiegermutter Adelheid übernahm daraufhin die Regentschaft." },
+    { cat: 'ottonen', q: "Welche Funktion hatten Interventionen von Königinnen in Urkunden?", a: ["Sie waren reine Zierde", "Sie zeigten, dass eine Fürsprache der Königin vorlag und bestätigten ihr politisches Gewicht", "Es war eine Strafe für die Königin", "Sie bewiesen, dass der König Analphabet war", "Sie galten als Verrat"], c: 1, expl: "Oft handelten Herrscher auf 'Intervention' (Bitte/Ratschlag) ihrer Frauen, was deren Einfluss dokumentiert." },
+    { cat: 'ottonen', q: "Was bildete oft die materielle Basis für die Machtausübung der ottonischen Königinnen?", a: ["Der byzantinische Staatsschatz", "Die Kontrolle über die Flotte", "Ausgedehnte Witwengüter und die Leitung einflussreicher Frauenstifte", "Handelsmonopole für Salz", "Söldnerheere"], c: 2, expl: "Güter in Quedlinburg, Gandersheim oder Magdeburg boten ihnen ökonomische und personelle Unabhängigkeit." },
+    { cat: 'ottonen', q: "Welche Beziehung hatten Adelheid und Theophanu am kaiserlichen Hof?", a: ["Sie führten offen Krieg gegeneinander", "Es gab erhebliche Spannungen zwischen der Schwiegermutter und der Schwiegertochter", "Sie regierten immer als gleichberechtigtes Doppel", "Theophanu verbannte Adelheid lebenslang", "Sie sprachen nie ein Wort miteinander"], c: 1, expl: "Die Quellen deuten auf starke Konkurrenz und Spannungen zwischen den beiden mächtigen Frauen hin." },
+    { cat: 'ottonen', q: "Welcher Forscher prägte den Blick auf die starken Herrscherinnen im hohen Mittelalter maßgeblich (wie in der Literaturliste ersichtlich)?", a: ["Thilo Vogelsang", "Karl Marx", "Otto von Bismarck", "Heinrich Schliemann", "Theodor Mommsen"], c: 0, expl: "Thilo Vogelsang schrieb das Standardwerk 'Frau als Herrscherin im hohen Mittelalter' (1954)." },
+    { cat: 'ottonen', q: "Wohin zog sich Adelheid zurück, wenn sie in Konflikt mit ihrem Mann Otto I. oder ihrem Sohn stand?", a: ["Nach Rom in die Engelsburg", "In ihre reichen Ländereien und zu geistlichen Verbündeten (Witwengut)", "Nach Byzanz", "In ein Verlies", "Nach England"], c: 1, expl: "Sie nutzte ihre materiellen und kirchlichen Netzwerke als sicheren Rückzugsort und Machtbasis." },
+    { cat: 'ottonen', q: "Welche der folgenden Aussagen fasst die Rolle der ottonischen Frauen am besten zusammen?", a: ["Sie waren politisch bedeutungslos", "Sie dienten nur der Nachkommenschaft", "Sie waren als 'dominae imperiales' zentrale Säulen der Herrschafts- und Friedenssicherung", "Sie durften den Hof nie verlassen", "Sie führten ausschließlich die Heere an"], c: 2, expl: "Ihre Mitwirkung war absolut fundamental für das Funktionieren und den Erhalt des ottonischen Reiches." },
+    { cat: 'ottonen', q: "In welchem Jahr wurde Adelheid von Burgund geboren?", a: ["912", "930", "955", "962", "973"], c: 1, expl: "Sie wurde 930 als Tochter von Rudolf II. aus Hochburgund geboren." },
+    { cat: 'ottonen', q: "Welche Kunstwerke belegen die Gleichberechtigung der Herrscherpaare in der ottonischen Zeit?", a: ["Keine, Frauen wurden nie abgebildet", "Ein Kircheneingang und eine Elfenbeinplatte, die die Paare auf exakt gleicher Höhe zeigen", "Münzen, auf denen Frauen nur als Dienerinnen zu sehen sind", "Ausschließlich Wandteppiche aus Byzanz", "Grabmäler, in denen Frauen kleiner dargestellt wurden"], c: 1, expl: "Sowohl Otto I. und Adelheid als auch Otto II. und Theophanu wurden in Kunstwerken auf Augenhöhe und in gleicher Größe präsentiert." },
+    { cat: 'ottonen', q: "Wie viel Prozent der ottonischen Herrscherportraits zeigen Frauen in Machtpositionen?", a: ["Unter 5%", "Circa 10%", "Mehr als ein Viertel (über 25%)", "Exakt 50%", "Keines"], c: 2, expl: "Die zeitgenössische Kunst verweist auf die starke, fast gleichberechtigte Stellung der Frauen in dieser Epoche." },
+    { cat: 'ottonen', q: "Welcher beleidigende Vorwurf wurde Theophanu in zeitgenössischen Dokumenten teilweise gemacht?", a: ["Sie sei eine Hexe", "Sie sei eine 'Diebin' der kaiserlichen Witwenposition von Adelheid", "Sie sei keine echte Prinzessin", "Sie sei ungebildet", "Sie wolle Byzanz erobern"], c: 1, expl: "Da sie Adelheid nach 973 massiv aus der Politik drängte, wurde sie von Teilen des Adels, die Adelheid sehr schätzten, stark kritisiert." },
+    { cat: 'ottonen', q: "Welcher wichtige Berater könnte Theophanus Politik im Hintergrund beeinflusst haben?", a: ["Bischof Brun", "Erzkanzler Willigis", "Markgraf Gero", "Papst Johannes XII.", "Konrad der Rote"], c: 1, expl: "Erzkanzler Willigis war ein einflussreicher politischer Akteur, der Theophanu vermutlich stark beratend zur Seite stand." },
+    { cat: 'ottonen', q: "Wem wurde der ehrenvolle Titel 'Mutter der Königreiche' verliehen?", a: ["Mathilde", "Theophanu", "Adelheid", "Edgith", "Liutgard"], c: 2, expl: "Diesen Titel erhielt Adelheid aufgrund ihrer Leistungen bei der Abwendung der Reichskrise nach 983." },
+    { cat: 'ottonen', q: "Wer wäre im fiktiven Falle eines fehlenden Sohnes von Otto II. der wahrscheinlichste Thronkandidat gewesen?", a: ["Otto von Worms", "Heinrich der Zänker", "Konrad von Burgund", "Hugo Capet", "Karl von Niederlothringen"], c: 1, expl: "Da Otto von Worms ohnehin kein großes Interesse am Thron zeigte (wie sein Verzicht 1002 bewies), galt Heinrich der Zänker als die konfliktbereite, entscheidende Konstante für einen Machtausbau." },
+    { cat: 'ottonen', q: "Warum hätte Theophanu in einem Szenario ohne männlichen Nachfolger fast keine Macht gehabt?", a: ["Weil das Gesetz Frauen ausschloss", "Weil ihr ohne Sohn als Erben die Legitimation sowie das innere politische Kontaktnetzwerk von Adelheid fehlten", "Weil sie nach Byzanz verbannt worden wäre", "Weil der Papst es verboten hätte", "Weil sie alle Ländereien verlor"], c: 1, expl: "Ihre Macht speiste sich primär aus der Rolle als Mutter des designierten Thronfolgers. Adelheid hingegen hatte eigene immense Netzwerke." },
+    { cat: 'ottonen', q: "Was bedeutet der Begriff 'consors regni', der sowohl Adelheid als auch Theophanu zugesprochen wurde?", a: ["Gottes Magd", "Ehefrau des Königs", "Gemeinsam oder gleichwertig regierend (Mitkaiserin)", "Mutter des Erben", "Stellvertreterin in Italien"], c: 2, expl: "Der Titel verweist auf eine faktische Teilhabe an der kaiserlichen Regierungsgewalt." }
 ];
 
 // ==========================================
@@ -1890,28 +2191,45 @@ function loadContent(contentId) {
             htmlContent = "<h2>Inhalt nicht gefunden</h2>";
         }
 
-        // --- NEU: WEITER-BUTTON LOGIK ---
-        
-        // a) Wir holen uns die Liste aller Menüpunkte des aktuellen Themas
+        // --- NEU: WEITER & ZURÜCK BUTTON LOGIK ---
         const menuItems = database[currentTopicKey].menu;
-        
-        // b) Wir suchen, an welcher Stelle (Index) wir gerade sind
         const currentIndex = menuItems.findIndex(item => item.id === contentId);
 
-        // c) Wenn wir nicht am Ende sind, bauen wir den Button
+        let buttonsHtml = '<div class="nav-buttons-container">';
+
+        // Zurück-Button (Wenn wir NICHT beim ersten Element sind)
+        if (currentIndex > 0) {
+            const prevItem = menuItems[currentIndex - 1];
+            buttonsHtml += `
+                <button class="prev-section-btn" onclick="loadContent('${prevItem.id}')">
+                    <span style="font-size: 1.2rem;">←</span> Zurück
+                </button>
+            `;
+        } else {
+            // Platzhalter, damit Flexbox den Weiter-Button rechts hält, falls kein Zurück-Button da ist
+            buttonsHtml += `<div></div>`; 
+        }
+
+        // Weiter-Button (Wenn wir NICHT beim letzten Element sind)
         if (currentIndex !== -1 && currentIndex < menuItems.length - 1) {
             const nextItem = menuItems[currentIndex + 1];
-            
-            // HTML für den Button anhängen
-            htmlContent += `
-                <div class="nav-buttons-container">
-                    <button class="next-section-btn" onclick="loadContent('${nextItem.id}')">
-                        Weiter ➔
-                    </button>
-                </div>
+            buttonsHtml += `
+                <button class="next-section-btn" onclick="loadContent('${nextItem.id}')">
+                    Weiter <span style="font-size: 1.2rem;">→</span>
+                </button>
+            `;
+        } else if (currentIndex === menuItems.length - 1) {
+            // Wenn wir beim letzten Element sind, loopen wir zurück zum ersten Element!
+            const firstItem = menuItems[0];
+            buttonsHtml += `
+                <button class="next-section-btn" onclick="loadContent('${firstItem.id}')">
+                    Zum Start <span style="font-size: 1.2rem;">↻</span>
+                </button>
             `;
         }
-        // -------------------------------
+
+        buttonsHtml += '</div>';
+        htmlContent += buttonsHtml;
 
         contentArea.innerHTML = htmlContent;
     }
@@ -2147,4 +2465,39 @@ function showExamResult() {
 function goHomeFromExam() {
     // Seite neu laden ist am saubersten, um den HTML-Zustand des Exam-Containers zurückzusetzen
     location.reload(); 
+}
+
+function copyBibliography() {
+    const textToCopy = `Appelt, H. (1969) 'Heinrich II.', in Neue Deutsche Biographie, Band 8, S. 310–313.
+Beumann, H. (2000) Die Ottonen. 5. Aufl. Stuttgart.
+Deeters, W. (1973) 'Zur Heiratsurkunde der Kaiserin Theophanu', Braunschweigisches Jahrbuch, 54.
+Dove, A. (1880) 'Heinrich II.', in Neue Deutsche Biographie.
+Ehlers, J. (2000) Die Kapetinger. Stuttgart/Berlin/Köln.
+Holtzmann, R. (1941) Geschichte der Sächsischen Kaiserzeit. 900 - 1024 mit Stammbaum. München.
+Jakobi, F.-J. (1979) 'Konrad', in Neue Deutsche Biographie, Band 12, S. 527.
+Kalckstein, L. F. K. von (1882) 'Karl', in Allgemeine Deutsche Biographie.
+Kowalski, W. (1913) Die deutschen Königinnen und Kaiserinnen: von Konrad III. bis zum Ende des Interregnums. Weimar.
+Oexle, O. G. (1969) 'Hermann II.', in Neue Deutsche Biographie, Band 8, S. 8.
+Reindel, K. (1969) 'Heinrich II.', in Neue Deutsche Biographie, Band 8, S. 341.
+Schieffer, R. (2005) 'Rudolfinger', in Neue Deutsche Biographie, Band 22, S. 198–200.
+Schieffer, T. (1977) 'Karl', in Neue Deutsche Biographie, Band 11, S. 229–230.
+Seibert, H. (1998/1999) 'Otto', in Neue Deutsche Biographie, Band 19, S. 689.
+Stälin, P. (1880) 'Hermann II.', in Allgemeine Deutsche Biographie.
+Stälin, P. (1882) 'Konrad', in Allgemeine Deutsche Biographie.
+Steinberg, S. (1931) Die Bildnisse geistlicher und weltlicher Fürsten und Herren. 1. Teil. Von der Mitte des 10. bis zum Ende des 12. Jahrhunderts (950-1200). Leipzig.
+Uhlirz, K. (1896) 'Die Interventionen in den Urkunden des Königs Otto III. bis zum Tode der Kaiserin Theophanu', Neues Archiv der Gesellschaft für Ältere Deutsche Geschichtskunde.
+Vogelsang, T. (1954) Frau als Herrscherin im hohen Mittelalter. Göttingen.
+Weinfurter, S. (2010) 'Kaiserin Adelheid und das ottonische Kaisertum'.
+Wolf, G. (Hrsg.) (1991) 'Nochmals zur Frage: Wer war Theophano?', in Kaiserin Theophanu. Prinzessin aus der Fremde – des Westreichs große Kaiserin. Köln.
+
+Bildbezogene Quellen:
+Richter, R. (1540/1546) Otto, Theophania, Blatt 22r. Dresden.
+Unbekannter Fotograf (o. D.) Adelheid, Kaiserin, geb. Prinzessin von Burgund.`;
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        alert('Das Literaturverzeichnis im Harvard-Stil wurde in die Zwischenablage kopiert!');
+    }).catch(err => {
+        console.error('Fehler beim Kopieren: ', err);
+        alert('Kopieren fehlgeschlagen. Bitte überprüfen Sie die Berechtigungen Ihres Browsers.');
+    });
 }

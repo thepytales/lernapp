@@ -202,33 +202,44 @@
         .node { min-width: 120px; font-size: 0.85rem; background: rgba(62, 179, 140, 0.1); border: 1px solid var(--primary); color: white;}
         .node.king { background: var(--primary); color: #0f1012; font-weight: bold; box-shadow: 0 0 15px var(--primary-glow); }
 
-        /* --- WEITER-BUTTON (unten im Text) --- */
+        /* --- NAVIGATION BUTTONS (unten im Text) --- */
         .nav-buttons-container {
             display: flex;
-            justify-content: flex-end; /* Rechtsbündig */
+            justify-content: space-between;
+            align-items: center;
             margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid var(--border);
+            gap: 10px;
         }
 
-        .next-section-btn {
+        .next-section-btn, .prev-section-btn {
             background: var(--primary);
-            color: #0f1012; /* Dunkler Text für Kontrast */
-            padding: 12px 24px;
-            border-radius: 50px; /* Pillen-Form */
+            color: #0f1012;
+            padding: 12px 15px;
+            border-radius: 50px;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.95rem;
             border: none;
             cursor: pointer;
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
             box-shadow: 0 4px 15px var(--primary-glow);
             transition: transform 0.2s;
             touch-action: manipulation;
+            flex: 1;
+            text-align: center;
         }
 
-        .next-section-btn:active {
+        .prev-section-btn {
+            background: #2c2e33;
+            color: var(--text);
+            box-shadow: none;
+        }
+
+        .next-section-btn:active, .prev-section-btn:active {
             transform: scale(0.95);
         }
 
@@ -239,8 +250,8 @@
 
     <div id="homescreen">
         <div class="glass-container">
-            <h1 class="title-gradient">Lisa's Lern App</h1>
-            <p style="color: var(--text-muted); margin-bottom: 2rem;">Wähle dein Lernmodul</p>
+            <h1 class="title-gradient">🎓 Lisa's Lern App</h1>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Wähle dein Lernmodul aus 👇</p>
             
             <div class="btn-grid">
                 <div class="topic-card" onclick="startApp('ottonen')">
@@ -251,17 +262,24 @@
                     </div>
                 </div>
                 <div class="topic-card" onclick="startApp('ww1')">
-                    <i>🎖️</i>
+                    <i>⚔️</i>
                     <div>
                         <strong>1. Weltkrieg</strong>
                         <small>Heimatfront & Folgen</small>
                     </div>
                 </div>
                 <div class="topic-card" onclick="startGlobalExam()" style="border-color: var(--primary); background: rgba(62, 179, 140, 0.05);">
-                    <i>🎓</i>
+                    <i>📝</i>
                     <div>
                         <strong>Abschlussprüfung</strong>
                         <small>20 Fragen Mix</small>
+                    </div>
+                </div>
+                <div class="topic-card" onclick="copyBibliography()" style="border-color: #6b7280; background: rgba(107, 114, 128, 0.05);">
+                    <i>📚</i>
+                    <div>
+                        <strong>Literatur kopieren</strong>
+                        <small>Harvard-Zitierweise</small>
                     </div>
                 </div>
             </div>

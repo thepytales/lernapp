@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lisa-app-v2';
+const CACHE_NAME = 'lisa-app-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
