@@ -252,7 +252,12 @@
     <div id="homescreen">
         <div class="glass-container">
             <h1 class="title-gradient">🎓 Lisa's Lern App</h1>
-            <p style="color: var(--text-muted); margin-bottom: 2rem;">Wähle dein Lernmodul aus 👇</p>
+            
+            <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 2rem;">
+                <button onclick="changeZoom(-1)" style="background: var(--bg-panel); border: 1px solid var(--border); color: var(--text); width: 45px; height: 45px; border-radius: 50%; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.4); touch-action: manipulation;">-</button>
+                <p style="color: var(--text-muted); margin: 0; font-weight: 500;">Wähle dein Lernmodul aus 👇</p>
+                <button onclick="changeZoom(1)" style="background: var(--bg-panel); border: 1px solid var(--border); color: var(--text); width: 45px; height: 45px; border-radius: 50%; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.4); touch-action: manipulation;">+</button>
+            </div>
             
             <div class="btn-grid">
                 <div class="topic-card" onclick="startApp('ottonen')">
@@ -346,6 +351,31 @@
                 document.getElementById('content-display').scrollTop = 0;
             }
         });
+
+        // Zoom-Logik mit Speicherung
+        let currentZoom = 16; // Standard-Basisgröße in Pixeln
+
+        // Beim Laden der Seite prüfen, ob ein Zoom-Level gespeichert wurde
+        const savedZoom = localStorage.getItem('appZoomLevel');
+        if (savedZoom) {
+            currentZoom = parseInt(savedZoom, 10);
+            document.documentElement.style.fontSize = currentZoom + 'px';
+        }
+
+        function changeZoom(step) {
+            // Skaliere um 2 Pixel pro Klick
+            currentZoom += (step * 2);
+            
+            // Grenzen setzen (nicht zu winzig, nicht zu riesig)
+            if (currentZoom < 12) currentZoom = 12;
+            if (currentZoom > 26) currentZoom = 26;
+            
+            // Setzt die Root-Font-Size neu
+            document.documentElement.style.fontSize = currentZoom + 'px';
+            
+            // Speichere den neuen Wert lokal, damit er beim Neuladen und Navigieren erhalten bleibt
+            localStorage.setItem('appZoomLevel', currentZoom);
+        }
     </script>
 
     <script src="script.js"></script>
